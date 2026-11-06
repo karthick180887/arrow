@@ -5,17 +5,16 @@ def logging_decorator(func):
         print("End Logging...")
     return wrapper
 
+@logging_decorator
 def add():
     print("Start Logging")
     print(10+2)
 
+
+@logging_decorator
 def subtract():
     print("Start Logging")
     print(10-2)
 
-
-log = logging_decorator(add)
-log()
-
-sub_log = logging_decorator(subtract)
-sub_log()
+add()
+subtract()
