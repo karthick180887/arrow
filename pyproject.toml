@@ -1,0 +1,13 @@
+[project]
+name = "arrow-training"
+version = "0.1.0"
+description = "Arrow Training"
+readme = "README.md"
+requires-python = "==3.14.*"
+dependencies = [
+    "jupyter-ruff>=0.3.1",
+    "jupyterlab>=4.6.2",
+    "matplotlib>=3.11.1",
+    "numpy>=2.4.6",
+    "pandas[excel,parquet,performance,plot]>=3.0.5",
+]
