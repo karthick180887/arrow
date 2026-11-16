@@ -18,3 +18,15 @@ FROM orders
 GROUP BY channel
 ORDER BY orders DESC
 """)
+################## Group by time ########################
+sql("""
+SELECT strftime('%Y-%m', o.order_date) AS month,
+       COUNT(DISTINCT o.order_id)      AS orders,
+       ROUND(SUM(i.quantity * i.unit_price * (1 - i.discount)), 2) AS revenue
+FROM orders AS o
+JOIN order_items AS i ON i.order_id = o.order_id
+WHERE o.status <> 'cancelled'
+GROUP BY month
+ORDER BY month
+LIMIT 8
+""")
