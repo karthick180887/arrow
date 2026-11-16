@@ -1,0 +1,2130 @@
+[
+  {
+    "order_id": 11941,
+    "placed_at": "2025-06-19T13:14:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0176",
+      "name": "Chloe Brown",
+      "email": "chloe.brown176@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P030",
+        "name": "Data Systems Design",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 52.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P033",
+        "name": "Building Blocks 500pc",
+        "category": "Toys",
+        "quantity": 2,
+        "unit_price": 44.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11942,
+    "placed_at": "2025-06-20T22:54:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0033",
+      "name": "Hugo Brown",
+      "email": "hugo.brown33@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P006",
+        "name": "Portable SSD 1TB",
+        "category": "Electronics",
+        "quantity": 5,
+        "unit_price": 109.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 27.5,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11943,
+    "placed_at": "2025-06-20T18:28:00Z",
+    "status": "returned",
+    "channel": "store",
+    "customer": {
+      "id": "C0064",
+      "name": "Emma Singh",
+      "email": "emma.singh64@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P001",
+        "name": "Wireless Mouse",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 24.99,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 27.5,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P006",
+        "name": "Portable SSD 1TB",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 109.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11944,
+    "placed_at": "2025-06-20T18:29:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0114",
+      "name": "Chloe Tremblay",
+      "email": "chloe.tremblay114@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P006",
+        "name": "Portable SSD 1TB",
+        "category": "Electronics",
+        "quantity": 2,
+        "unit_price": 109.0,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P012",
+        "name": "Memory Foam Pillow",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 42.0,
+        "discount": 0.15
+      },
+      {
+        "product_id": "P034",
+        "name": "Puzzle 1000pc",
+        "category": "Toys",
+        "quantity": 3,
+        "unit_price": 16.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Chennai",
+      "country": "India"
+    }
+  },
+  {
+    "order_id": 11945,
+    "placed_at": "2025-06-20T10:56:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0109",
+      "name": "Ryan Johnson",
+      "email": "ryan.johnson109@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P023",
+        "name": "Tennis Racket",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 129.0,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P014",
+        "name": "Vacuum Flask",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 21.5,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Munich",
+      "country": "Germany"
+    }
+  },
+  {
+    "order_id": 11946,
+    "placed_at": "2025-06-20T11:47:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0150",
+      "name": "Felix Moreau",
+      "email": "felix.moreau150@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P018",
+        "name": "Resistance Bands",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 15.5,
+        "discount": 0.15
+      },
+      {
+        "product_id": "P030",
+        "name": "Data Systems Design",
+        "category": "Books",
+        "quantity": 2,
+        "unit_price": 52.0,
+        "discount": 0.1
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11947,
+    "placed_at": "2025-06-20T14:59:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0102",
+      "name": "Olivia Martin",
+      "email": "olivia.martin102@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P035",
+        "name": "Remote Control Car",
+        "category": "Toys",
+        "quantity": 4,
+        "unit_price": 58.0,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P026",
+        "name": "SQL Query Workbook",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 41.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11948,
+    "placed_at": "2025-06-21T12:47:00Z",
+    "status": "returned",
+    "channel": "web",
+    "customer": {
+      "id": "C0206",
+      "name": "Diego Garcia",
+      "email": "diego.garcia206@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P035",
+        "name": "Remote Control Car",
+        "category": "Toys",
+        "quantity": 2,
+        "unit_price": 58.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P031",
+        "name": "Charts That Work",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 30.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Toronto",
+      "country": "Canada"
+    }
+  },
+  {
+    "order_id": 11949,
+    "placed_at": "2025-06-21T21:36:00Z",
+    "status": "returned",
+    "channel": "store",
+    "customer": {
+      "id": "C0190",
+      "name": "Hugo Patel",
+      "email": "hugo.patel190@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P036",
+        "name": "Board Game Classic",
+        "category": "Toys",
+        "quantity": 1,
+        "unit_price": 28.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 2,
+        "unit_price": 27.5,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P001",
+        "name": "Wireless Mouse",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 24.99,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P004",
+        "name": "Noise-Cancelling Headphones",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 199.0,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P024",
+        "name": "Water Bottle",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 12.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11950,
+    "placed_at": "2025-06-21T15:58:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0202",
+      "name": "Chloe Weber",
+      "email": "chloe.weber202@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P017",
+        "name": "Yoga Mat",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 25.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P023",
+        "name": "Tennis Racket",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 129.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P001",
+        "name": "Wireless Mouse",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 24.99,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11951,
+    "placed_at": "2025-06-21T09:04:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0154",
+      "name": "Kavya Schmidt",
+      "email": "kavya.schmidt154@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P027",
+        "name": "Data Science Handbook",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 48.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Chicago",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11952,
+    "placed_at": "2025-06-21T17:36:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0156",
+      "name": "Mateo Fischer",
+      "email": "mateo.fischer156@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P024",
+        "name": "Water Bottle",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 12.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": "gift wrap",
+    "shipping": {
+      "city": "Paris",
+      "country": "France"
+    }
+  },
+  {
+    "order_id": 11953,
+    "placed_at": "2025-06-22T14:31:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0150",
+      "name": "Felix Moreau",
+      "email": "felix.moreau150@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P013",
+        "name": "Cast Iron Pan",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 38.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P010",
+        "name": "Air Fryer",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 119.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P031",
+        "name": "Charts That Work",
+        "category": "Books",
+        "quantity": 3,
+        "unit_price": 30.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11954,
+    "placed_at": "2025-06-22T12:59:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0102",
+      "name": "Olivia Martin",
+      "email": "olivia.martin102@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P024",
+        "name": "Water Bottle",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 12.0,
+        "discount": 0.2
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Toronto",
+      "country": "Canada"
+    }
+  },
+  {
+    "order_id": 11955,
+    "placed_at": "2025-06-22T11:46:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0069",
+      "name": "Ryan Sharma",
+      "email": "ryan.sharma69@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P037",
+        "name": "Plush Bear",
+        "category": "Toys",
+        "quantity": 1,
+        "unit_price": 14.5,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P027",
+        "name": "Data Science Handbook",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 48.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P007",
+        "name": "Bluetooth Speaker",
+        "category": "Electronics",
+        "quantity": 2,
+        "unit_price": 49.9,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11956,
+    "placed_at": "2025-06-22T08:23:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0150",
+      "name": "Felix Moreau",
+      "email": "felix.moreau150@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P017",
+        "name": "Yoga Mat",
+        "category": "Sports",
+        "quantity": 5,
+        "unit_price": 25.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P034",
+        "name": "Puzzle 1000pc",
+        "category": "Toys",
+        "quantity": 2,
+        "unit_price": 16.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P015",
+        "name": "Wall Clock",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 18.0,
+        "discount": 0.05
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11957,
+    "placed_at": "2025-06-22T20:16:00Z",
+    "status": "cancelled",
+    "channel": "web",
+    "customer": {
+      "id": "C0005",
+      "name": "Hannah Schmidt",
+      "email": "hannah.schmidt5@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P010",
+        "name": "Air Fryer",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 119.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "order_id": 11958,
+    "placed_at": "2025-06-23T20:14:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0002",
+      "name": "Rohan Fischer",
+      "email": "rohan.fischer2@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P014",
+        "name": "Vacuum Flask",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 21.5,
+        "discount": 0.0
+      }
+    ],
+    "notes": "gift wrap",
+    "shipping": {
+      "city": "Dublin",
+      "country": "Ireland"
+    }
+  },
+  {
+    "order_id": 11959,
+    "placed_at": "2025-06-23T12:22:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0197",
+      "name": "Olivia Gupta",
+      "email": "olivia.gupta197@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P031",
+        "name": "Charts That Work",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 30.0,
+        "discount": 0.1
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11960,
+    "placed_at": "2025-06-23T11:25:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0007",
+      "name": "Lucia Fernandez",
+      "email": "lucia.fernandez7@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P002",
+        "name": "Mechanical Keyboard",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 89.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Paris",
+      "country": "France"
+    }
+  },
+  {
+    "order_id": 11961,
+    "placed_at": "2025-06-23T09:17:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0123",
+      "name": "Grace Lopez",
+      "email": "grace.lopez123@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P008",
+        "name": "Smart Watch",
+        "category": "Electronics",
+        "quantity": 3,
+        "unit_price": 179.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P031",
+        "name": "Charts That Work",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 30.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P007",
+        "name": "Bluetooth Speaker",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 49.9,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11962,
+    "placed_at": "2025-06-24T08:37:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0150",
+      "name": "Felix Moreau",
+      "email": "felix.moreau150@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P008",
+        "name": "Smart Watch",
+        "category": "Electronics",
+        "quantity": 5,
+        "unit_price": 179.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P005",
+        "name": "Webcam 1080p",
+        "category": "Electronics",
+        "quantity": 3,
+        "unit_price": 59.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P021",
+        "name": "Dumbbell Pair 5kg",
+        "category": "Sports",
+        "quantity": 3,
+        "unit_price": 45.0,
+        "discount": 0.1
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11963,
+    "placed_at": "2025-06-24T10:19:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0033",
+      "name": "Hugo Brown",
+      "email": "hugo.brown33@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P036",
+        "name": "Board Game Classic",
+        "category": "Toys",
+        "quantity": 4,
+        "unit_price": 28.0,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P022",
+        "name": "Skipping Rope",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 9.9,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P013",
+        "name": "Cast Iron Pan",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 38.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Toronto",
+      "country": "Canada"
+    }
+  },
+  {
+    "order_id": 11964,
+    "placed_at": "2025-06-24T16:11:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0202",
+      "name": "Chloe Weber",
+      "email": "chloe.weber202@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P032",
+        "name": "Pandas in Practice",
+        "category": "Books",
+        "quantity": 2,
+        "unit_price": 39.0,
+        "discount": 0.1
+      }
+    ],
+    "notes": "gift wrap"
+  },
+  {
+    "order_id": 11965,
+    "placed_at": "2025-06-24T10:35:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0033",
+      "name": "Hugo Brown",
+      "email": "hugo.brown33@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P014",
+        "name": "Vacuum Flask",
+        "category": "Home",
+        "quantity": 4,
+        "unit_price": 21.5,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P036",
+        "name": "Board Game Classic",
+        "category": "Toys",
+        "quantity": 1,
+        "unit_price": 28.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P025",
+        "name": "Python Basics Guide",
+        "category": "Books",
+        "quantity": 3,
+        "unit_price": 32.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Toronto",
+      "country": "Canada"
+    }
+  },
+  {
+    "order_id": 11966,
+    "placed_at": "2025-06-24T17:11:00Z",
+    "status": "cancelled",
+    "channel": "web",
+    "customer": {
+      "id": "C0202",
+      "name": "Chloe Weber",
+      "email": "chloe.weber202@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P015",
+        "name": "Wall Clock",
+        "category": "Home",
+        "quantity": 4,
+        "unit_price": 18.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P032",
+        "name": "Pandas in Practice",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 39.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Paris",
+      "country": "France"
+    }
+  },
+  {
+    "order_id": 11967,
+    "placed_at": "2025-06-25T20:40:00Z",
+    "status": "cancelled",
+    "channel": "web",
+    "customer": {
+      "id": "C0181",
+      "name": "Grace Roy",
+      "email": "grace.roy181@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P031",
+        "name": "Charts That Work",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 30.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Toronto",
+      "country": "Canada"
+    }
+  },
+  {
+    "order_id": 11968,
+    "placed_at": "2025-06-25T17:46:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0041",
+      "name": "Vikram Bernard",
+      "email": "vikram.bernard41@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P034",
+        "name": "Puzzle 1000pc",
+        "category": "Toys",
+        "quantity": 4,
+        "unit_price": 16.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P018",
+        "name": "Resistance Bands",
+        "category": "Sports",
+        "quantity": 5,
+        "unit_price": 15.5,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 4,
+        "unit_price": 27.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Manchester",
+      "country": "UK"
+    }
+  },
+  {
+    "order_id": 11969,
+    "placed_at": "2025-06-25T19:56:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0029",
+      "name": "Noah Sharma",
+      "email": "noah.sharma29@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P033",
+        "name": "Building Blocks 500pc",
+        "category": "Toys",
+        "quantity": 1,
+        "unit_price": 44.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 27.0,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P024",
+        "name": "Water Bottle",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 12.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Manchester",
+      "country": "UK"
+    }
+  },
+  {
+    "order_id": 11970,
+    "placed_at": "2025-06-25T10:53:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0069",
+      "name": "Ryan Sharma",
+      "email": "ryan.sharma69@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P032",
+        "name": "Pandas in Practice",
+        "category": "Books",
+        "quantity": 4,
+        "unit_price": 39.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 27.0,
+        "discount": 0.05
+      },
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 3,
+        "unit_price": 27.5,
+        "discount": 0.05
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Dublin",
+      "country": "Ireland"
+    }
+  },
+  {
+    "order_id": 11971,
+    "placed_at": "2025-06-25T21:48:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0086",
+      "name": "Zoe Garcia",
+      "email": "zoe.garcia86@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P005",
+        "name": "Webcam 1080p",
+        "category": "Electronics",
+        "quantity": 3,
+        "unit_price": 59.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "New York",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11972,
+    "placed_at": "2025-06-26T16:09:00Z",
+    "status": "returned",
+    "channel": "web",
+    "customer": {
+      "id": "C0043",
+      "name": "Meera Jones",
+      "email": "meera.jones43@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P032",
+        "name": "Pandas in Practice",
+        "category": "Books",
+        "quantity": 3,
+        "unit_price": 39.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P014",
+        "name": "Vacuum Flask",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 21.5,
+        "discount": 0.15
+      },
+      {
+        "product_id": "P012",
+        "name": "Memory Foam Pillow",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 42.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P035",
+        "name": "Remote Control Car",
+        "category": "Toys",
+        "quantity": 1,
+        "unit_price": 58.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Bengaluru",
+      "country": "India"
+    }
+  },
+  {
+    "order_id": 11973,
+    "placed_at": "2025-06-26T15:51:00Z",
+    "status": "returned",
+    "channel": "web",
+    "customer": {
+      "id": "C0230",
+      "name": "Owen Tremblay",
+      "email": "owen.tremblay230@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P012",
+        "name": "Memory Foam Pillow",
+        "category": "Home",
+        "quantity": 4,
+        "unit_price": 42.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 27.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P007",
+        "name": "Bluetooth Speaker",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 49.9,
+        "discount": 0.05
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Toronto",
+      "country": "Canada"
+    }
+  },
+  {
+    "order_id": 11974,
+    "placed_at": "2025-06-26T12:30:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0036",
+      "name": "Kavya Weber",
+      "email": "kavya.weber36@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P013",
+        "name": "Cast Iron Pan",
+        "category": "Home",
+        "quantity": 5,
+        "unit_price": 38.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "New York",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11975,
+    "placed_at": "2025-06-26T09:49:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0188",
+      "name": "Liam Singh",
+      "email": "liam.singh188@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P013",
+        "name": "Cast Iron Pan",
+        "category": "Home",
+        "quantity": 3,
+        "unit_price": 38.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P034",
+        "name": "Puzzle 1000pc",
+        "category": "Toys",
+        "quantity": 2,
+        "unit_price": 16.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "New York",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11976,
+    "placed_at": "2025-06-26T22:23:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0032",
+      "name": "Vikram Taylor",
+      "email": "vikram.taylor32@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P008",
+        "name": "Smart Watch",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 179.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P021",
+        "name": "Dumbbell Pair 5kg",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 45.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11977,
+    "placed_at": "2025-06-26T22:09:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0224",
+      "name": "Hannah Wilson",
+      "email": "hannah.wilson224@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P010",
+        "name": "Air Fryer",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 119.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P032",
+        "name": "Pandas in Practice",
+        "category": "Books",
+        "quantity": 2,
+        "unit_price": 39.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P007",
+        "name": "Bluetooth Speaker",
+        "category": "Electronics",
+        "quantity": 2,
+        "unit_price": 49.9,
+        "discount": 0.0
+      }
+    ],
+    "notes": "gift wrap",
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11978,
+    "placed_at": "2025-06-27T16:44:00Z",
+    "status": "returned",
+    "channel": "web",
+    "customer": {
+      "id": "C0036",
+      "name": "Kavya Weber",
+      "email": "kavya.weber36@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P015",
+        "name": "Wall Clock",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 18.0,
+        "discount": 0.2
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "New York",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11979,
+    "placed_at": "2025-06-27T19:57:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0093",
+      "name": "Diego Jones",
+      "email": "diego.jones93@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P022",
+        "name": "Skipping Rope",
+        "category": "Sports",
+        "quantity": 3,
+        "unit_price": 9.9,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P009",
+        "name": "Electric Kettle",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 34.5,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Toronto",
+      "country": "Canada"
+    }
+  },
+  {
+    "order_id": 11980,
+    "placed_at": "2025-06-27T13:59:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0137",
+      "name": "Priya Reddy",
+      "email": "priya.reddy137@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P025",
+        "name": "Python Basics Guide",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 32.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P018",
+        "name": "Resistance Bands",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 15.5,
+        "discount": 0.05
+      }
+    ],
+    "notes": "gift wrap"
+  },
+  {
+    "order_id": 11981,
+    "placed_at": "2025-06-27T08:23:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0021",
+      "name": "Sofia Fischer",
+      "email": "sofia.fischer21@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P026",
+        "name": "SQL Query Workbook",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 41.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 27.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P022",
+        "name": "Skipping Rope",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 9.9,
+        "discount": 0.0
+      }
+    ],
+    "notes": "gift wrap",
+    "shipping": {
+      "city": "Bengaluru",
+      "country": "India"
+    }
+  },
+  {
+    "order_id": 11982,
+    "placed_at": "2025-06-27T16:40:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0187",
+      "name": "Zoe Bernard",
+      "email": "zoe.bernard187@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P037",
+        "name": "Plush Bear",
+        "category": "Toys",
+        "quantity": 5,
+        "unit_price": 14.5,
+        "discount": 0.2
+      },
+      {
+        "product_id": "P032",
+        "name": "Pandas in Practice",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 39.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11983,
+    "placed_at": "2025-06-27T12:02:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0058",
+      "name": "Hugo Martin",
+      "email": "hugo.martin58@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P003",
+        "name": "USB-C Hub",
+        "category": "Electronics",
+        "quantity": 3,
+        "unit_price": 39.5,
+        "discount": 0.15
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11984,
+    "placed_at": "2025-06-28T17:31:00Z",
+    "status": "shipped",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0133",
+      "name": "Mia Fernandez",
+      "email": "mia.fernandez133@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P006",
+        "name": "Portable SSD 1TB",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 109.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P036",
+        "name": "Board Game Classic",
+        "category": "Toys",
+        "quantity": 3,
+        "unit_price": 28.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 5,
+        "unit_price": 27.5,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P014",
+        "name": "Vacuum Flask",
+        "category": "Home",
+        "quantity": 4,
+        "unit_price": 21.5,
+        "discount": 0.05
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Munich",
+      "country": "Germany"
+    }
+  },
+  {
+    "order_id": 11985,
+    "placed_at": "2025-06-28T16:50:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0133",
+      "name": "Mia Fernandez",
+      "email": "mia.fernandez133@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P033",
+        "name": "Building Blocks 500pc",
+        "category": "Toys",
+        "quantity": 1,
+        "unit_price": 44.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P021",
+        "name": "Dumbbell Pair 5kg",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 45.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P002",
+        "name": "Mechanical Keyboard",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 89.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P027",
+        "name": "Data Science Handbook",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 48.0,
+        "discount": 0.05
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11986,
+    "placed_at": "2025-06-28T21:25:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0150",
+      "name": "Felix Moreau",
+      "email": "felix.moreau150@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 4,
+        "unit_price": 27.0,
+        "discount": 0.2
+      },
+      {
+        "product_id": "P015",
+        "name": "Wall Clock",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 18.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11987,
+    "placed_at": "2025-06-28T09:14:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0013",
+      "name": "Sofia Reddy",
+      "email": "sofia.reddy13@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P019",
+        "name": "Running Shoes",
+        "category": "Sports",
+        "quantity": 2,
+        "unit_price": 95.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P017",
+        "name": "Yoga Mat",
+        "category": "Sports",
+        "quantity": 4,
+        "unit_price": 25.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11988,
+    "placed_at": "2025-06-28T13:46:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0033",
+      "name": "Hugo Brown",
+      "email": "hugo.brown33@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P004",
+        "name": "Noise-Cancelling Headphones",
+        "category": "Electronics",
+        "quantity": 2,
+        "unit_price": 199.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P006",
+        "name": "Portable SSD 1TB",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 109.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 27.5,
+        "discount": 0.0
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11989,
+    "placed_at": "2025-06-28T18:36:00Z",
+    "status": "completed",
+    "channel": "store",
+    "customer": {
+      "id": "C0033",
+      "name": "Hugo Brown",
+      "email": "hugo.brown33@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P029",
+        "name": "Clean Coding Guide",
+        "category": "Books",
+        "quantity": 2,
+        "unit_price": 36.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P025",
+        "name": "Python Basics Guide",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 32.0,
+        "discount": 0.05
+      }
+    ],
+    "notes": null
+  },
+  {
+    "order_id": 11990,
+    "placed_at": "2025-06-28T15:16:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0067",
+      "name": "Priya Gupta",
+      "email": "priya.gupta67@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 1,
+        "unit_price": 27.5,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Paris",
+      "country": "France"
+    }
+  },
+  {
+    "order_id": 11991,
+    "placed_at": "2025-06-28T08:51:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0026",
+      "name": "Lucia Smith",
+      "email": "lucia.smith26@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P034",
+        "name": "Puzzle 1000pc",
+        "category": "Toys",
+        "quantity": 1,
+        "unit_price": 16.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P014",
+        "name": "Vacuum Flask",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 21.5,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P015",
+        "name": "Wall Clock",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 18.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Chicago",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11992,
+    "placed_at": "2025-06-28T14:59:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0208",
+      "name": "Ryan Kelly",
+      "email": "ryan.kelly208@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P023",
+        "name": "Tennis Racket",
+        "category": "Sports",
+        "quantity": 3,
+        "unit_price": 129.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P002",
+        "name": "Mechanical Keyboard",
+        "category": "Electronics",
+        "quantity": 4,
+        "unit_price": 89.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P012",
+        "name": "Memory Foam Pillow",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 42.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": "gift wrap",
+    "shipping": {
+      "city": "Chicago",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11993,
+    "placed_at": "2025-06-29T16:52:00Z",
+    "status": "shipped",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0119",
+      "name": "Ethan Murphy",
+      "email": "ethan.murphy119@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P014",
+        "name": "Vacuum Flask",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 21.5,
+        "discount": 0.05
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Bengaluru",
+      "country": "India"
+    }
+  },
+  {
+    "order_id": 11994,
+    "placed_at": "2025-06-29T19:03:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0150",
+      "name": "Felix Moreau",
+      "email": "felix.moreau150@example.com",
+      "segment": "Corporate"
+    },
+    "items": [
+      {
+        "product_id": "P008",
+        "name": "Smart Watch",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 179.0,
+        "discount": 0.1
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  },
+  {
+    "order_id": 11995,
+    "placed_at": "2025-06-30T10:46:00Z",
+    "status": "returned",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0075",
+      "name": "Chloe Schmidt",
+      "email": "chloe.schmidt75@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P017",
+        "name": "Yoga Mat",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 25.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 27.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Lyon",
+      "country": "France"
+    }
+  },
+  {
+    "order_id": 11996,
+    "placed_at": "2025-06-30T22:52:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0058",
+      "name": "Hugo Martin",
+      "email": "hugo.martin58@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P002",
+        "name": "Mechanical Keyboard",
+        "category": "Electronics",
+        "quantity": 4,
+        "unit_price": 89.0,
+        "discount": 0.05
+      }
+    ],
+    "notes": "gift wrap",
+    "shipping": {
+      "city": "Chicago",
+      "country": "USA"
+    }
+  },
+  {
+    "order_id": 11997,
+    "placed_at": "2025-06-30T19:56:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0113",
+      "name": "Lea Iyer",
+      "email": "lea.iyer113@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P011",
+        "name": "Desk Lamp",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 27.0,
+        "discount": 0.1
+      },
+      {
+        "product_id": "P015",
+        "name": "Wall Clock",
+        "category": "Home",
+        "quantity": 2,
+        "unit_price": 18.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "order_id": 11998,
+    "placed_at": "2025-06-30T15:20:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0066",
+      "name": "Felix Gupta",
+      "email": "felix.gupta66@example.com",
+      "segment": "Small Business"
+    },
+    "items": [
+      {
+        "product_id": "P008",
+        "name": "Smart Watch",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 179.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P004",
+        "name": "Noise-Cancelling Headphones",
+        "category": "Electronics",
+        "quantity": 4,
+        "unit_price": 199.0,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "order_id": 11999,
+    "placed_at": "2025-06-30T22:20:00Z",
+    "status": "completed",
+    "channel": "web",
+    "customer": {
+      "id": "C0071",
+      "name": "Grace Fischer",
+      "email": "grace.fischer71@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P003",
+        "name": "USB-C Hub",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 39.5,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P009",
+        "name": "Electric Kettle",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 34.5,
+        "discount": 0.0
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Chennai",
+      "country": "India"
+    }
+  },
+  {
+    "order_id": 12000,
+    "placed_at": "2025-06-30T09:09:00Z",
+    "status": "completed",
+    "channel": "mobile",
+    "customer": {
+      "id": "C0105",
+      "name": "Hugo Menon",
+      "email": "hugo.menon105@example.com",
+      "segment": "Consumer"
+    },
+    "items": [
+      {
+        "product_id": "P028",
+        "name": "Statistics Primer",
+        "category": "Books",
+        "quantity": 2,
+        "unit_price": 27.5,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P026",
+        "name": "SQL Query Workbook",
+        "category": "Books",
+        "quantity": 4,
+        "unit_price": 41.0,
+        "discount": 0.0
+      },
+      {
+        "product_id": "P023",
+        "name": "Tennis Racket",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 129.0,
+        "discount": 0.05
+      }
+    ],
+    "notes": null,
+    "shipping": {
+      "city": "Lyon",
+      "country": "France"
+    }
+  }
+]

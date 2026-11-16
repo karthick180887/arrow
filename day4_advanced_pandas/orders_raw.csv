@@ -1,0 +1,402 @@
+order_id,customer_id,email,order_date,status,channel,quantity,amount
+10332,C0201,owen.kelly201@example.com,2024-05-01,completed,mobile,4,374.11
+10747,C0191,owen.brown191@example.com,2024-09-09,completed,web,5,121.50
+10592,C0041,vikram.bernard41@example.com,2024-07-18,completed,web,6,270.85
+11484,C9999,grace.roy181@example.com,2025-03-02,SHIPPED ,mobile,2,14375.00
+10257,C0036,kavya.weber36@example.com,2024-04-06, completed ,web,5,
+10355,C0201,owen.kelly201@example.com,2024-05-09,shipped,web,5,$144.00
+10603,C0201,owen.kelly201@example.com,2024-07-23,Cancelled,mobile,3,1.00
+11245,C0181,grace.roy181@example.com,2024-12-23,COMPLETED,store,4,120.00
+10306,C0107,kavya.smith107@example.com,24/04/2024, completed ,web,1,21.60
+10125,C9999,,2024-02-19,completed,store,1,21.50
+11279,C0016,sofia.fernandez16@example.com,2025-01-02,Cancelled,store,3,$83.50
+10758,C0109,ryan.johnson109@example.com,2024-09-13,completed,store,N/A,245.16
+10833,C0166,noah.dubois166@example.com,2024-09-30,Cancelled,web,4,$180.50
+10495,C0109,ryan.johnson109@example.com,"Jun 18, 2024",completed,mobile,4,$86.00
+10887,C0085,liam.murphy85@example.com,2024-10-16,completed,store,10,207.62
+10988,C0221,ananya.smith221@example.com,2024-11-11,Completed,mobile,7,372.60
+11291,C0224,hannah.wilson224@example.com,2025-01-04,completed,web,7,$181.00
+10603,C0201,owen.kelly201@example.com,2024-07-23,Cancelled,mobile,3,28.80
+10101,C0226,priya.taylor226@example.com,2024-02-09,completed,mobile,2,37.70
+10068,C0067,priya.gupta67@example.com,"Jan 30, 2024",completed,web,1,$28.80
+10430,C0001,,2024-05-29,completed,web,3,$100.80
+11567,C0036,kavya.weber36@example.com,2025-03-23,completed,web,1,14.50
+10276,,,2024-04-13,Completed,web,2,
+10465,C0150,felix.moreau150@example.com,,COMPLETED,store,2,$64.00
+11055,C0109,ryan.johnson109@example.com,2024-11-23,Completed,mobile,3,29.70
+11894,C0081,liam.fernandez81@example.com,2025-06-07,COMPLETED,mobile,2,103.00
+11757,C0203,sofia.miller203@example.com,2025-05-07,Completed,store,4,64.80
+10064,C0193,lucas.davis193@example.com,2024-01-29,completed,web,7,$340.60
+11197,C0181,grace.roy181@example.com,2024-12-16,COMPLETED,web,5,$135.00
+11923,C0036,kavya.weber36@example.com,2025-06-15,SHIPPED ,store,3,$369.00
+11492,C0033,hugo.brown33@example.com,2025-03-03,completed,web,3,87.98
+11226,C0127,felix.taylor127@example.com,2024-12-20,completed,web,5,453.52
+10472,c0071,grace.fischer71@example.com,,completed,mobile,1,32.00
+10417,C0113,lea.iyer113@example.com,2024-05-26,COMPLETED,web,4,$561.75
+11556,c0033,hugo.brown33@example.com,20/03/2025,Completed,web,1,47.20
+11165,C0200,chloe.schmidt200@example.com,2024-12-11,Completed,mobile,8,1.00
+11906,C0186,hugo.menon186@example.com,2025-06-10,shipped,mobile,8,$277.60
+11042,C0181,grace.roy181@example.com,2024-11-22,completed,web,5,$210.00
+11441,C0021,sofia.fischer21@example.com,2025-02-22,completed,store,2,195.20
+11979,C0093,diego.jones93@example.com,2025-06-27,completed,mobile,4,61.23
+11085,C0017,kavya.fischer17@example.com,2024-11-27,Completed,web,4,$126.95
+10945,c0105,hugo.menon105@example.com,2024-10-29,Shipped,mobile,3,$84.99
+10221,C0109,ryan.johnson109 at example.com,2024-03-25,completed,web,3,$182.64
+10858,C0127,,2024-10-08,returned,web,4,191.10
+11498,C0067,priya.gupta67@example.com,05/03/2025,completed,mobile,,359.50
+10204,,ryan.johnson109@example.com,"Mar 18, 2024", completed ,web,5,219.55
+10271,C0020,chloe.bernard20@example.com,2024-04-10,completed,web,5,122.20
+10079,C0150,felix.moreau150@example.com,2024-02-03,COMPLETED,mobile,5,$211.00
+11104,C0150,felix.moreau150@example.com,2024-11-30,completed,mobile,3,103.50
+10679,C0118,meera.gupta118@example.com,2024-08-17, completed ,web,10,$376.30
+10803,C0092,lucas.bernard92@example.com,2024-09-23,Completed,web,N/A,310.50
+11674,C0102,,"Apr 18, 2025",completed,mobile,1,$49.90
+10045,C0166,noah.dubois166 at example.com,"Jan 24, 2024",completed,mobile,N/A,32.00
+10655,C0045,zoe.bernard45@example.com,2024-08-11,completed,web,1,29.00
+10965,C0194,emma.brown194@example.com,03/11/2024,completed,web,6,157.47
+11933,C0102,olivia.martin102@example.com,2025-06-17,completed,mobile,10,$618.33
+11742,C9999,olivia.fernandez100@example.com,2025-05-03,completed,store,4,191.50
+11601,C0061,lucia.miller61@example.com,2025-04-02,Completed,web,11,408.00
+10136,C0020,,2024-02-22, completed ,web,5,207.52
+10031,C0181,grace.roy181@example.com,2024-01-17,COMPLETED,web,6,216.98
+11194,C0095,owen.singh95@example.com,"Dec 15, 2024",completed,store,13,$648.00
+10219,C0176,chloe.brown176@example.com,2024-03-24,COMPLETED,web,5,-108.00
+11302,C0150,felix.moreau150@example.com,2025-01-09,completed,mobile,7,$252.18
+11503,C0033,hugo.brown33@example.com,2025-03-06, completed ,mobile,7,171.90
+11667,C0158,grace.kelly158@example.com,2025-04-18, completed ,mobile,1,109.65
+10781,C0085,liam.murphy85@example.com,2024-09-17,completed,web,1,42.75
+10702,C0181,grace.roy181@example.com,2024-08-25,Completed,mobile,8,$257.45
+11625,C0109,ryan.johnson109@example.com,07/04/2025,completed,web,0,72.00
+10713,C0208,ryan.kelly208@example.com,30/08/2024,completed,store,4,175.60
+11538,C0199,mateo.sharma199@example.com,2025-03-14,completed,web,0,132.99
+10880,C0217,kavya.fischer217@example.com,2024-10-14,COMPLETED,store,4,$229.00
+11698,C0160,hannah.moreau160@example.com,2025-04-24,completed,web,2,1.00
+11692,C0102,olivia.martin102@example.com,22/04/2025,completed,web,13,1154.10
+10213,C9999,,2024-03-21,Completed,store,5,$142.00
+10979,c0166,noah.dubois166@example.com,2024-11-09,Completed,mobile,2,$104.40
+11938,C0038,mia.menon38@example.com,2025-06-19,completed,web,4,319.70
+10057,C0217,kavya.fischer217@example.com,"Jan 27, 2024", RETURNED,web,9,116.82
+10383,C0181,grace.roy181 at example.com,2024-05-17,Completed,mobile,2,93.60
+10756,C0212,priya.taylor212@example.com,"Sep 12, 2024",Completed,store,1,$56.05
+10050,C0071,grace.fischer71@example.com,2024-01-25,completed,store,N/A,790.55
+10744,C0100,olivia.fernandez100@example.com,2024-09-07,Completed,mobile,1,4320.00
+11191,C0187,zoe.bernard187@example.com,"Dec 15, 2024",completed,store,5,167.09
+11542,C0069,ryan.sharma69@example.com,2025-03-16,returned,web,7,$220.00
+11084,C0203,sofia.miller203@example.com,2024-11-27,completed,store,7,195.20
+10544,C0080,lea.lopez80@example.com,2024-07-03,completed,web,11,$325.99
+10760,c0092,lucas.bernard92@example.com,2024-09-14,completed,web,2,116.00
+11574,C0206,diego.garcia206@example.com,2025-03-25, completed ,mobile,4,232.00
+11785,C0154,kavya.schmidt154@example.com,"May 12, 2025",completed,store,0,100.60
+11028,C0066,felix.gupta66@example.com,2024-11-20, completed ,web,7,$243.40
+11179,C0029,noah.sharma29@example.com,2024-12-13,completed,web,0,$122.51
+10362,C0017,kavya.fischer17@example.com,2024-05-11,completed,web,5,$292.55
+11533,C0069,ryan.sharma69@example.com,2025-03-13,completed,web,N/A,125.90
+11079,C0130,,2024-11-27, completed ,mobile,1,
+11054,C0121,vikram.davis121@example.com,2024-11-23,completed,web,11,$413.00
+10368,C0055,zoe.menon55@example.com,"May 12, 2024",Completed,store,3,54.00
+10556,C0160,hannah.moreau160@example.com,2024-07-06,completed,web,3,187.40
+10070,c0229,ryan.schmidt229@example.com,2024-01-30,COMPLETED,mobile,2,50.20
+10496,C0190,hugo.patel190@example.com,18/06/2024,Completed,store,1,3600.00
+10046,C0057,ryan.jones57@example.com,2024-01-24, completed ,web,8,260.20
+11274,c0181,grace.roy181@example.com,2025-01-01,Returned,mobile,6,$298.20
+10325,C0021,sofia.fischer21@example.com,2024-04-29,completed,web,8,-263.31
+10375,c0181,grace.roy181@example.com,2024-05-14,Completed,web,6,174.95
+10890,C0171,priya.iyer171@example.com,2024-10-16, completed ,mobile,2,$65.41
+10508,C0181,grace.roy181@example.com,22/06/2024,COMPLETED,web,6,-385.73
+11395,C0163,ethan.kelly163@example.com,2025-02-08,COMPLETED,mobile,5,$182.40
+11641,C0202,chloe.weber202@example.com,2025-04-11, completed ,mobile,3,$96.91
+11820,C0102,olivia.martin102@example.com,2025-05-23,Completed,mobile,5,49.50
+10352,C9999,ryan.nair31@example.com,2024-05-07,cancelled,mobile,3,248.00
+10629,C9999,felix.wilson42@example.com,2024-08-03,completed,mobile,3,82.50
+10024,C0019,ethan.weber19@example.com,13/01/2024, completed ,web,5,$299.20
+10308,C0063,lucas.taylor63@example.com,2030-04-24,completed,web,1,39.50
+10433,C0139,lucia.sharma139@example.com,2024-05-30,Completed,mobile,2,$65.50
+10994,c0061,lucia.miller61 at example.com,2024-11-12, completed ,web,2,90.00
+10856,c0024,noah.murphy24@example.com,07/10/2024,cancelled,web,1,-39.90
+10463,C0181,grace.roy181@example.com,"Jun 08, 2024",completed,store,3,132.60
+10100,C0175,mia.nair175@example.com,2024-02-09,shipped,mobile,1,29.32
+10197,C0025,zoe.johnson25@example.com,15/03/2024, completed ,web,,32.00
+11513,C0181,grace.roy181@example.com,2025-03-08,completed,web,4,$93.60
+11939,C0127,felix.taylor127@example.com,19/06/2025,returned,mobile,4,56.41
+10553,C0137,priya.reddy137@example.com,"Jul 05, 2024",completed,web,4,$154.32
+10889,C0022,rohan.garcia22@example.com,2024-10-16,completed,web,4,345.00
+11848,C0085,liam.murphy85@example.com,28/05/2025,completed,web,6,186.78
+11611,C0180,ethan.nair180@example.com,2025-04-04,shipped,store,8,316.00
+11279,C0016,sofia.fernandez16@example.com,2025-01-02,Cancelled,store,3,$83.50
+10991,C0147,mateo.garcia147@example.com,11/11/2024,Completed,mobile,5,$738.00
+11454,C0176,chloe.brown176@example.com,2025-02-25,completed,store,7,$350.00
+10721,C0031,ryan.nair31@example.com,01/09/2024,completed,web,4,104.48
+11371,C0203,sofia.miller203@example.com,2025-01-29,Shipped,web,7,209.50
+10713,C0208,ryan.kelly208@example.com,30/08/2024,completed,store,4,175.60
+11711,C9999,mateo.garcia147@example.com,"Apr 26, 2025",completed,web,7,382.20
+10527,C0102,olivia.martin102@example.com,,completed,mobile,4,-127.00
+10527,C0102,olivia.martin102@example.com,,completed,mobile,4,-127.00
+10112,C0013,sofia.reddy13@example.com,2024-02-14,completed,web,3,
+10232,C0176,chloe.brown176@example.com,"Mar 29, 2024", completed ,mobile,10,777.10
+10788,C0108,lucia.kelly108@example.com,"Sep 19, 2024",COMPLETED,mobile,3,7500.00
+11117,C0111,meera.garcia111@example.com,03/12/2024,completed,store,1,189.05
+10415,C0181,,25/05/2024, completed ,web,6,231.50
+11183,C9999,kavya.fischer17@example.com,2024-12-13,cancelled,web,2,$90.00
+11547,C0119,ethan.murphy119@example.com,2025-03-17,completed,mobile,7,137.25
+10252,C0150,felix.moreau150@example.com,2024-04-04,Completed,mobile,1,
+11290,C0163,ethan.kelly163@example.com,"Jan 04, 2025",completed,web,5,199.50
+11037,C0121,vikram.davis121@example.com,2024-11-22,completed,mobile,5,
+10116,C0026,lucia.smith26@example.com,2024-02-16,canceled,web,3,54.62
+10631,C0171,priya.iyer171@example.com,"Aug 03, 2024",Completed,mobile,1,$30.60
+11415,C0021,sofia.fischer21 at example.com,2025-02-15, completed ,web,N/A,
+11334,C0206,diego.garcia206@example.com,19/01/2025,returned,web,5,1.00
+10545,C0032,vikram.taylor32@example.com,2024-07-03,shipped,mobile,3,$108.00
+10353,c0125,hannah.brown125@example.com,2024-05-07,completed,web,2,$169.20
+11655,C0052,olivia.dubois52@example.com,13/04/2025,completed,web,5,206.10
+11413,c0060,zoe.roy60@example.com,2025-02-14,cancelled,store,1,$24.99
+10939,C0033,hugo.brown33@example.com,2024-10-28,completed,mobile,3,99.61
+11395,C0163,ethan.kelly163@example.com,2025-02-08,COMPLETED,mobile,5,$182.40
+11935,C0160,hannah.moreau160 at example.com,2031-06-17, completed ,mobile,7,122.70
+10124,C0135,felix.lopez135@example.com,2024-02-19,completed,web,1,$179.00
+11379,C0222,jonas.iyer222@example.com,2025-01-31,completed,web,7,
+11729,C0033,hugo.brown33@example.com,2025-05-01,completed,web,7,99.40
+11005,C0140,lucia.lopez140 at example.com,14/11/2024,completed,web,12,$498.52
+10395,C0067,priya.gupta67@example.com,2024-05-19,completed,web,5,$212.00
+11991,C0026,lucia.smith26@example.com,"Jun 28, 2025",completed,mobile,5,$90.70
+10906,C0111,,2024-10-20,Completed,store,8,
+11544,C0023,,2025-03-16,Completed,mobile,6,$94.60
+11108,c0176,chloe.brown176@example.com,01/12/2024,COMPLETED,web,11,
+10369,C0033,hugo.brown33@example.com,2024-05-12,shipped,store,5,$337.00
+11568,C0033,hugo.brown33@example.com,2025-03-23,completed,web,2,$56.07
+11988,C0033,hugo.brown33@example.com,2025-06-28,Completed,store,4,$534.50
+11647,C0029,noah.sharma29@example.com,12/04/2025,completed,web,6,-155.00
+10950,C0069,ryan.sharma69@example.com,2024-10-30,completed,store,2,$79.85
+10077,C0033,hugo.brown33@example.com,2024-02-02,completed,mobile,1,49.90
+10586,C0202,chloe.weber202@example.com,2024-07-16,completed,web,6,268.32
+11466,C0025,zoe.johnson25@example.com,2025-02-28,Completed,web,2,
+11165,C0200,chloe.schmidt200@example.com,2024-12-11,Completed,mobile,8,$789.05
+11563,C0013,sofia.reddy13@example.com,2025-03-22,completed,web,8,$184.50
+11314,C0067,priya.gupta67@example.com,2025-01-11,Completed,store,6,$458.20
+11913,C0071,grace.fischer71@example.com,12/06/2025,Completed,mobile,3,$61.27
+11848,C0085,liam.murphy85@example.com,28/05/2025,completed,web,6,186.78
+11967,C0181,grace.roy181@example.com,2025-06-25,cancelled,web,1,30.00
+11720,C0058,hugo.martin58@example.com,2025-04-28,completed,web,3,$53.40
+10830,C0171,priya.iyer171@example.com,2024-09-30,completed,store,8,483.20
+10212,C0033,hugo.brown33@example.com,20/03/2024,completed,store,4,216.10
+10439,C0172,rohan.smith172@example.com,2024-05-31, completed ,mobile,4,100.00
+10825,C0087,owen.patel87@example.com,,SHIPPED ,web,5,167.60
+11275,c0201,owen.kelly201@example.com,2025-01-01,COMPLETED,web,1,116.10
+10863,C0054,ryan.lopez54@example.com,2024-10-10,completed,web,0,
+11767,C0031,ryan.nair31@example.com,2025-05-08,cancelled,mobile,2,5457.50
+11832,C0175,mia.nair175@example.com,25/05/2025,completed,store,7,230.40
+11814,C0020,chloe.bernard20@example.com,20/05/2025,COMPLETED,web,1,25.65
+11665,c0011,grace.garcia11@example.com,"Apr 17, 2025",completed,web,2,72.00
+10033,C9999,noah.dubois166@example.com,"Jan 18, 2024",completed,web,10,$284.00
+10612,C0033,hugo.brown33@example.com,2024-07-26,completed,web,0,68.40
+11346,C0001,rohan.lopez1@example.com,2025-01-22,cancelled,web,1,113.05
+11697,C0174,sofia.fernandez174@example.com,2025-04-24,Completed,web,1,-14.40
+11917,C0020,chloe.bernard20@example.com,2025-06-13,completed,web,3,$73.05
+11931,C0033,hugo.brown33 at example.com,2025-06-17,COMPLETED,web,5,$191.00
+11912,C0067,priya.gupta67@example.com,11/06/2025,Completed,mobile,2,79.00
+11804,C0036,kavya.weber36@example.com,2025-05-18,Completed,store,5,29540.00
+11121,C0189,mateo.schmidt189@example.com,03/12/2024,completed,store,1,58.00
+10030,C0221,ananya.smith221@example.com,2024-01-17,completed,mobile,3,103.50
+10110,C0109,ryan.johnson109@example.com,2024-02-14,completed,mobile,5,$224.55
+10121,C0171,priya.iyer171@example.com,"Feb 18, 2024",completed,web,0,124.55
+11564,C0071,grace.fischer71@example.com,2025-03-23,Completed,web,5,13300.00
+11552,C0020,chloe.bernard20@example.com,2025-03-19,completed,web,6,$441.82
+10428,C0092,lucas.bernard92@example.com,2024-05-29,COMPLETED,mobile,6,$140.13
+11885,C0042,felix.wilson42@example.com,2025-06-06,completed,mobile,3,$174.00
+11814,C0020,chloe.bernard20@example.com,20/05/2025,COMPLETED,web,1,25.65
+11186,C0221,ananya.smith221@example.com,2024-12-14,COMPLETED,mobile,3,
+10809,C0203,sofia.miller203@example.com,2024-09-24,completed,web,8,554.20
+10745,C0059,meera.nair59@example.com,2024-09-07,completed,mobile,5,186.10
+11660,C0071,grace.fischer71@example.com,16/04/2025,SHIPPED ,web,3,$323.20
+11648,c0102,olivia.martin102@example.com,2025-04-12,completed,store,3,267.00
+10907,C0161,,"Oct 20, 2024",completed,web,3,-122.00
+11081,C0109,ryan.johnson109@example.com,2024-11-27,completed,store,1,$27.50
+11396,C0226,priya.taylor226@example.com,2025-02-08, RETURNED,mobile,3,$94.50
+10830,C0171,priya.iyer171@example.com,2024-09-30,completed,store,8,483.20
+11320,C0121,vikram.davis121@example.com,"Jan 14, 2025",COMPLETED,web,2,$209.00
+11545,C0133,mia.fernandez133@example.com,17/03/2025,shipped,mobile,8,261.50
+10101,C0226,priya.taylor226@example.com,2024-02-09,completed,mobile,2,37.70
+10481,C0121,vikram.davis121 at example.com,14/06/2024,completed,web,7,$222.00
+11420,C0229,ryan.schmidt229@example.com,2025-02-16,SHIPPED ,web,1,$15.50
+11426,C0197,olivia.gupta197@example.com,"Feb 18, 2025",COMPLETED,mobile,6,$105.75
+11119,C0176,chloe.brown176@example.com,"Dec 03, 2024",completed,store,2,44.98
+10931,C0041,vikram.bernard41@example.com,26/10/2024,completed,web,3,
+10479,C0135,felix.lopez135@example.com,2024-06-14,completed,mobile,5,$202.92
+10694,C0119,ethan.murphy119@example.com,"Aug 22, 2024",COMPLETED,mobile,6,$278.21
+10189,c0171,priya.iyer171 at example.com,2024-03-13, completed ,store,0,695.00
+10600,C0067,priya.gupta67@example.com,2024-07-22,completed,store,4,$235.00
+11755,C0092,lucas.bernard92@example.com,2025-05-06,canceled,store,9,1050.45
+11960,C0007,lucia.fernandez7@example.com,2025-06-23,completed,web,1,89.00
+11325,C0181,grace.roy181@example.com,2025-01-15,completed,mobile,2,57.50
+11076,C0102,olivia.martin102@example.com,2024-11-26,canceled,store,2,87.70
+10975,C0055,zoe.menon55@example.com,2024-11-07, completed ,store,5,-278.90
+10652,C0187,,2024-08-09,shipped,store,3,76.95
+10238,C0211,kavya.davis211@example.com,2024-03-31,completed,web,9,
+11351,C0036,kavya.weber36@example.com,"Jan 23, 2025",shipped,store,6,23343.00
+11928,C0036,kavya.weber36@example.com,16/06/2025,completed,store,6,218.80
+11090,C0198,jonas.murphy198@example.com,2024-11-28,completed,web,-1,95.00
+10580,C0067,priya.gupta67@example.com,14/07/2024,completed,mobile,4,-69.45
+11106,C0161,vikram.wilson161@example.com,2024-12-01,completed,mobile,3,249.40
+11424,C0109,ryan.johnson109@example.com,2025-02-17,COMPLETED,web,6,$232.00
+10585,C0092,lucas.bernard92@example.com,2024-07-15,shipped,mobile,8,230.70
+11687,C0211,kavya.davis211@example.com,"Apr 21, 2025",completed,web,3,-367.65
+11653,c0071,grace.fischer71@example.com,"Apr 13, 2025",COMPLETED,store,3,132.70
+10129,C0208,ryan.kelly208@example.com,2024-02-21,completed,web,N/A,$202.00
+11498,C0067,priya.gupta67@example.com,05/03/2025,completed,mobile,,359.50
+11293,C0021,sofia.fischer21@example.com,2025-01-05,COMPLETED,store,4,$118.15
+10299,C0006,sofia.menon6@example.com,"Apr 20, 2024",returned,store,-1,175.60
+11336,C0200,chloe.schmidt200@example.com,"Jan 19, 2025",completed,store,6,205.66
+11557,C0055,zoe.menon55@example.com,21/03/2025,completed,store,3,45.90
+10248,C0005,hannah.schmidt5@example.com,2024-04-03,completed,web,1,31.20
+11475,C0048,jonas.kelly48@example.com,2025-03-01,completed,mobile,2,70.20
+10394,C0150,felix.moreau150@example.com,2024-05-19,Shipped,web,6,$180.40
+10835,C0202,chloe.weber202@example.com,2024-10-01, completed ,store,5,$259.00
+10282,C0112,,16/04/2024,cancelled,web,4,193.70
+11714,C0069,ryan.sharma69@example.com,2025-04-27, completed ,mobile,12,55219.10
+11266,C0118,meera.gupta118@example.com,2024-12-29, completed ,web,12,$772.00
+11834,C0202,chloe.weber202@example.com,2025-05-26,COMPLETED,web,,57.50
+11920,C0171,priya.iyer171@example.com,2025-06-14,Cancelled,web,2,87.60
+10255,C0196,hugo.moreau196@example.com,,cancelled,web,8,274.22
+11799,C0042,felix.wilson42@example.com,17/05/2025,Completed,store,2,
+10786,C0171,priya.iyer171@example.com,2024-09-18,completed,store,12,968.00
+11365,C0038,mia.menon38@example.com,27/01/2025,completed,mobile,3,26700.00
+10531,C0036,kavya.weber36@example.com,2024-06-28,cancelled,mobile,1,$36.00
+10584,C0032,vikram.taylor32@example.com,2024-07-14,cancelled,mobile,3,148.20
+11619,C0043,meera.jones43@example.com,06/04/2025,completed,web,8,327.55
+11594,C0186,hugo.menon186@example.com,"Mar 31, 2025",Shipped,web,4,144.60
+11434,C0090,isabella.nair90@example.com,2025-02-20,returned,mobile,2,223.75
+10304,C0003,felix.garcia3@example.com,2024-04-23,Completed,web,4,204.00
+11873,C0181,grace.roy181@example.com,"Jun 03, 2025",completed,mobile,6,$101.50
+10384,C0212,priya.taylor212@example.com,2024-05-17,completed,mobile,3,46.50
+11174,C0197,olivia.gupta197@example.com,"Dec 12, 2024",cancelled,web,-1,$27.50
+10515,C0109,ryan.johnson109@example.com,2024-06-25, completed ,store,3,90.00
+10074,C0178,vikram.weber178@example.com,,canceled,web,1,$129.00
+11925,C0108,lucia.kelly108@example.com,16/06/2025,completed,web,4,254.00
+11593,C0089,,31/03/2025, completed ,mobile,9,408.55
+11092,C0158,grace.kelly158@example.com,2024-11-28,cancelled,web,14,430.70
+10530,C0113,lea.iyer113@example.com,2024-06-28,cancelled,mobile,3,124.00
+11474,C0224,hannah.wilson224@example.com,01/03/2025, completed ,mobile,6,150.57
+10077,C0033,hugo.brown33@example.com,2024-02-02,completed,mobile,1,49.90
+11700,c0002,rohan.fischer2@example.com,2025-04-24,completed,mobile,4,$128.00
+10917,,ryan.schmidt229@example.com,24/10/2024,Completed,store,3,321.20
+11853,C0071,grace.fischer71@example.com,2025-05-29,Completed,web,2,32.00
+10343,C0036,kavya.weber36@example.com,2024-05-04, completed ,store,1,$28.00
+11738,C0121,vikram.davis121@example.com,2031-05-02, completed ,store,2,79.00
+11034,C0175,mia.nair175@example.com,2030-11-21, RETURNED,web,,$201.90
+10611,C0109,ryan.johnson109@example.com,2024-07-26,completed,store,5,236.03
+10066,C0181,grace.roy181@example.com,2024-01-30,COMPLETED,mobile,13,
+11382,C0125,,02/02/2025,completed,web,3,112.00
+10211,C0019,ethan.weber19@example.com,20/03/2024,completed,web,2,60.00
+11101,C0066,felix.gupta66@example.com,2024-11-30, completed ,mobile,4,189.80
+10573,c0181,grace.roy181@example.com,2024-07-12,completed,web,0,9.90
+11224,C0102,olivia.martin102@example.com,2024-12-20,shipped,mobile,4,120.38
+11982,C0187,zoe.bernard187@example.com,2025-06-27, completed ,store,6,97.00
+11622,C9999,owen.patel87@example.com,2025-04-06,completed,mobile,10,51100.00
+10974,C0041,vikram.bernard41@example.com,"Nov 05, 2024",completed,mobile,1,59.00
+11815,,priya.iyer171@example.com,2025-05-21, completed ,mobile,4,
+11519,C0113,lea.iyer113@example.com,09/03/2025,Completed,web,,330.20
+11511,C0225,meera.roy225@example.com,08/03/2025,Completed,web,5,$163.73
+10619,C0150,felix.moreau150@example.com,"Jul 30, 2024", completed ,web,2,
+11451,C0197,olivia.gupta197@example.com,"Feb 24, 2025",completed,web,4,$245.60
+10528,C0063,lucas.taylor63@example.com,28/06/2024,Completed,store,5,$142.00
+11839,C0108,lucia.kelly108@example.com,2025-05-27,completed,mobile,3,39.02
+10451,C0085,liam.murphy85@example.com,2024-06-04,completed,web,5,$82.50
+10875,C0019,ethan.weber19@example.com,2024-10-12,completed,web,9,$413.70
+11243,C0150,felix.moreau150@example.com,2024-12-23,completed,mobile,1,38.00
+10434,C0113,lea.iyer113@example.com,2024-05-30, completed ,store,4,$154.00
+11826,C0202,chloe.weber202@example.com,,completed,web,1,35.10
+11963,C0033,hugo.brown33@example.com,2025-06-24,completed,web,7,163.21
+11569,C0001,rohan.lopez1@example.com,2025-03-24,Shipped,store,2,62.10
+10582,C0069,ryan.sharma69@example.com,2024-07-14,completed,web,8,356.67
+11624,C0087,owen.patel87@example.com,2025-04-06,COMPLETED,web,4,332.10
+11064,C0113,lea.iyer113@example.com,"Nov 25, 2024",returned,mobile,1,26.12
+10290,C0147,mateo.garcia147@example.com,2024-04-18, completed ,store,6,$583.95
+10164,C0221,ananya.smith221@example.com,2024-03-06, completed ,web,4,88.02
+11616,C0197,olivia.gupta197@example.com,2025-04-05,COMPLETED,web,10,309.50
+11138,C0171,priya.iyer171@example.com,2024-12-06,completed,web,0,168.57
+10483,C0181,grace.roy181@example.com,15/06/2024,Cancelled,store,1,179.00
+11324,C0033,hugo.brown33@example.com,"Jan 15, 2025",Shipped,mobile,2,66.50
+10608,C0180,ethan.nair180@example.com,"Jul 25, 2024",cancelled,store,4,136.14
+11904,C0108,,"Jun 08, 2025",Shipped,web,3,294.30
+10060,C0019,ethan.weber19@example.com,2024-01-27,Completed,web,6,396.50
+10317,C0056,mateo.taylor56@example.com,2024-04-27,cancelled,web,8,326.80
+10240,C0133,mia.fernandez133@example.com,2024-03-31, completed ,web,5,158.60
+11230,C0229,ryan.schmidt229@example.com,2024-12-21,completed,web,3,143.00
+10638,C0200,chloe.schmidt200@example.com,2024-08-04,COMPLETED,web,,14.40
+10675,C0201,owen.kelly201@example.com,2024-08-16,returned,mobile,3,1.00
+11730,C0007,lucia.fernandez7@example.com,2025-05-01,COMPLETED,web,2,64.80
+11819,C0060,zoe.roy60@example.com,2025-05-23,completed,mobile,5,$281.50
+10515,C0109,ryan.johnson109@example.com,2024-06-25, completed ,store,3,90.00
+10323,C0208,ryan.kelly208@example.com,2030-04-28,Completed,store,2,71.40
+11951,C0154,kavya.schmidt154@example.com,2025-06-21,Completed,web,1,
+11676,C0200,chloe.schmidt200@example.com,2025-04-19,completed,mobile,3,$118.80
+11610,C0181,grace.roy181@example.com,2025-04-04, completed ,mobile,3,50745.00
+10555,c0166,noah.dubois166@example.com,2024-07-05,completed,store,2,73.80
+11334,C0206,diego.garcia206@example.com,19/01/2025,returned,web,5,145.60
+10539,C0071,grace.fischer71@example.com,2030-06-29,completed,mobile,9,$293.45
+10938,C0055,zoe.menon55@example.com,2024-10-28,completed,store,1,27.00
+10163,C9999,,2024-03-06, completed ,mobile,,$377.80
+10071,C0015,hugo.weber15@example.com,2024-01-31,cancelled,web,4,87.40
+10307,C0221,ananya.smith221@example.com,2024-04-24,SHIPPED ,web,5,$140.00
+11135,C0015,hugo.weber15@example.com,2024-12-06,completed,web,3,$537.00
+11199,C0109,ryan.johnson109@example.com,2024-12-16,Completed,web,5,194.28
+10583,C0019,ethan.weber19@example.com,2024-07-14,Completed,mobile,8,776.38
+11746,C0131,owen.schmidt131@example.com,2025-05-04, completed ,mobile,,247.91
+10671,C0118,meera.gupta118@example.com,"Aug 15, 2024",Cancelled,store,N/A,$36.90
+10368,C0055,zoe.menon55@example.com,"May 12, 2024",Completed,store,3,54.00
+11246,C0197,olivia.gupta197@example.com,2024-12-23,Completed,web,7,$148.00
+11932,C0007,lucia.fernandez7@example.com,2025-06-17,cancelled,web,6,185.38
+10345,C0181,grace.roy181@example.com,2024-05-04, RETURNED,store,6,930.35
+10974,C0041,vikram.bernard41@example.com,"Nov 05, 2024",completed,mobile,1,59.00
+10301,C0033,hugo.brown33@example.com,2024-04-20,completed,store,5,280.99
+10354,C0019,ethan.weber19 at example.com,08/05/2024,returned,store,1,101.15
+11790,C0057,ryan.jones57@example.com,2025-05-14,completed,store,4,39.60
+10267,C0123,grace.lopez123@example.com,2024-04-09,completed,store,7,$215.22
+10412,C0171,priya.iyer171@example.com,2024-05-24,cancelled,web,1,58.00
+10480,c0071,grace.fischer71@example.com,2024-06-14,Completed,web,2,62.47
+11795,C0039,mateo.gupta39@example.com,2025-05-16,completed,web,2,55.00
+10808,C0176,chloe.brown176@example.com,2024-09-24,completed,web,5,$374.40
+11465,C0199,mateo.sharma199@example.com,2025-02-27,completed,store,1,37.80
+11966,C0202,chloe.weber202@example.com,2025-06-24,Cancelled,web,,$111.00
+11385,C0147,mateo.garcia147@example.com,2025-02-05,completed,store,7,$317.27
+11861,C0047,ethan.lopez47@example.com,"May 31, 2025",Completed,store,3,6890.00
+10910,C0145,lucia.fischer145@example.com,2024-10-21,shipped,store,1,27.00
+10793,C0069,ryan.sharma69@example.com,2024-09-20,COMPLETED,web,1,$98.10
+11473,C0058,hugo.martin58 at example.com,2025-02-28,Shipped,mobile,2,
+11609,C0007,lucia.fernandez7@example.com,2025-04-04,canceled,mobile,0,2750.00
+10176,C0202,chloe.weber202@example.com,2024-03-09, completed ,mobile,1,34.50
+10675,C0201,owen.kelly201@example.com,2024-08-16,returned,mobile,3,192.70
+11613,C0073,diego.reddy73@example.com,2025-04-05,COMPLETED,web,-1,$87.00
+10783,C0036,kavya.weber36@example.com,2024-09-17,Shipped,mobile,8,268.15
+11737,C0143,ryan.singh143@example.com,2025-05-02,shipped,store,3,$137.00
+10908,C0019,ethan.weber19@example.com,2024-10-21,completed,web,7,223.75
+10680,C0104,priya.nair104@example.com,2024-08-17,Completed,store,8,571.70
+11732,C0187,zoe.bernard187@example.com,2025-05-01,cancelled,mobile,2,187.10
+11811,c0071,grace.fischer71@example.com,2025-05-20,SHIPPED ,web,3,126.00
+10592,C0041,vikram.bernard41@example.com,2024-07-18,completed,web,6,1.00
+10621,C0131,owen.schmidt131@example.com,"Jul 31, 2024",Shipped,web,6,263.90
+11234,,felix.lopez135@example.com,21/12/2024,Completed,mobile,1,-179.00
+10772,C0221,ananya.smith221@example.com,2024-09-15, completed ,web,1,14.50
+10486,C0150,felix.moreau150@example.com,2024-06-17, completed ,store,9,$370.00
+11488,C0226,priya.taylor226@example.com,2025-03-03,Completed,web,6,
+10351,C0088,,2024-05-06,completed,web,4,$158.00
+10367,C0150,felix.moreau150@example.com,2024-05-11,completed,store,2,9640.00
+11551,C0202,chloe.weber202@example.com,"Mar 18, 2025",completed,mobile,1,85.50
+11898,C0151,aarav.patel151@example.com,2025-06-08,COMPLETED,store,5,60010.00
+10169,C0138,,2024-03-08, completed ,web,3,54.82
+11698,C0160,hannah.moreau160@example.com,2025-04-24,completed,web,2,258.00
+10186,C0138,vikram.schmidt138@example.com,2024-03-11,completed,mobile,4,
+11180,C0033,hugo.brown33@example.com,13/12/2024,COMPLETED,mobile,3,268.20
+10298,C0202,chloe.weber202@example.com,2024-04-19,Completed,web,1,$15.20
+10234,C0015,hugo.weber15@example.com,2024-03-29,returned,web,1,2150.00
+11606,C0018,diego.sharma18@example.com,2025-04-03,COMPLETED,mobile,2,73.45
+11700,c0002,rohan.fischer2@example.com,2025-04-24,completed,mobile,4,$128.00
+11768,C0202,chloe.weber202@example.com,2025-05-09,completed,web,6,135.00
+10195,C0181,grace.roy181@example.com,2024-03-14,cancelled,mobile,8,624.80
+10174,C9999,grace.fischer71@example.com,09/03/2024, completed ,store,4,190.10
+11260,C0016,sofia.fernandez16@example.com,2024-12-28,Completed,web,3,$134.73
+10433,C0139,lucia.sharma139@example.com,2024-05-30,Completed,mobile,2,$65.50
+10571,C0033,hugo.brown33 at example.com,2030-07-12,Completed,mobile,3,$228.45
+11874,C0150,felix.moreau150@example.com,2025-06-03,completed,web,5,$463.25
+11311,C0108,lucia.kelly108@example.com,"Jan 10, 2025",completed,web,2,99.00
+10618,c0007,lucia.fernandez7 at example.com,2030-07-30, completed ,web,N/A,402.50
+10789,C0005,hannah.schmidt5@example.com,2024-09-19, completed ,web,2,54.00

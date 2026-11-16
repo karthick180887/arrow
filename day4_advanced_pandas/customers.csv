@@ -1,0 +1,251 @@
+customer_id,name,email,city,country,segment,signup_date
+C0001,Rohan Lopez,rohan.lopez1@example.com,Bengaluru,India,Small Business,2022-11-17
+C0002,Rohan Fischer,rohan.fischer2@example.com,Dublin,Ireland,Small Business,2022-03-10
+C0003,Felix Garcia,felix.garcia3@example.com,Chennai,India,Consumer,2023-07-28
+C0004,Lucia Murphy,lucia.murphy4@example.com,Madrid,Spain,Small Business,2022-09-28
+C0005,Hannah Schmidt,hannah.schmidt5@example.com,Berlin,Germany,Consumer,2023-08-24
+C0006,Sofia Menon,sofia.menon6@example.com,Manchester,UK,Consumer,2023-02-09
+C0007,Lucia Fernandez,lucia.fernandez7@example.com,Paris,France,Corporate,2023-04-07
+C0008,Mia Brown,mia.brown8@example.com,London,UK,Small Business,2023-12-10
+C0009,Jonas Lopez,jonas.lopez9@example.com,Chennai,India,Consumer,2022-05-23
+C0010,Ethan Patel,ethan.patel10@example.com,Madrid,Spain,Corporate,2022-04-23
+C0011,Grace Garcia,grace.garcia11@example.com,Berlin,Germany,Consumer,2023-12-08
+C0012,Grace Taylor,grace.taylor12@example.com,Manchester,UK,Consumer,2022-12-09
+C0013,Sofia Reddy,sofia.reddy13@example.com,Bengaluru,India,Consumer,2022-12-14
+C0014,Mateo Fischer,mateo.fischer14@example.com,Toronto,Canada,Corporate,2022-11-16
+C0015,Hugo Weber,hugo.weber15@example.com,Manchester,UK,Corporate,2022-08-17
+C0016,Sofia Fernandez,sofia.fernandez16@example.com,New York,USA,Consumer,2022-10-10
+C0017,Kavya Fischer,kavya.fischer17@example.com,Mumbai,India,Consumer,2022-04-13
+C0018,Diego Sharma,diego.sharma18@example.com,New York,USA,Corporate,2023-07-29
+C0019,Ethan Weber,ethan.weber19@example.com,Paris,France,Consumer,2023-07-24
+C0020,Chloe Bernard,chloe.bernard20@example.com,London,UK,Consumer,2022-04-13
+C0021,Sofia Fischer,sofia.fischer21@example.com,Bengaluru,India,Consumer,2022-12-10
+C0022,Rohan Garcia,rohan.garcia22@example.com,Mumbai,India,Consumer,2023-04-09
+C0023,Rohan Dubois,rohan.dubois23@example.com,New York,USA,Consumer,2022-08-10
+C0024,Noah Murphy,noah.murphy24@example.com,Toronto,Canada,Consumer,2022-06-06
+C0025,Zoe Johnson,zoe.johnson25@example.com,London,UK,Consumer,2022-06-20
+C0026,Lucia Smith,lucia.smith26@example.com,Chicago,USA,Corporate,2022-08-03
+C0027,Ananya Dubois,ananya.dubois27@example.com,Madrid,Spain,Corporate,2023-07-27
+C0028,Lucas Wilson,lucas.wilson28@example.com,Berlin,Germany,Consumer,2023-08-18
+C0029,Noah Sharma,noah.sharma29@example.com,Manchester,UK,Corporate,2022-03-07
+C0030,Jonas Murphy,jonas.murphy30@example.com,Chennai,India,Consumer,2022-04-28
+C0031,Ryan Nair,ryan.nair31@example.com,Munich,Germany,Consumer,2023-05-24
+C0032,Vikram Taylor,vikram.taylor32@example.com,Paris,France,Corporate,2022-08-09
+C0033,Hugo Brown,hugo.brown33@example.com,Toronto,Canada,Consumer,2022-03-05
+C0034,Noah Tremblay,noah.tremblay34@example.com,Berlin,Germany,Corporate,2023-10-26
+C0035,Sofia Singh,sofia.singh35@example.com,Chennai,India,Corporate,2023-12-09
+C0036,Kavya Weber,kavya.weber36@example.com,New York,USA,Consumer,2022-11-25
+C0037,Rohan Iyer,rohan.iyer37@example.com,Munich,Germany,Consumer,2023-10-21
+C0038,Mia Menon,mia.menon38@example.com,Chennai,India,Consumer,2022-08-12
+C0039,Mateo Gupta,mateo.gupta39@example.com,Munich,Germany,Corporate,2023-09-18
+C0040,Ethan Weber,ethan.weber40@example.com,Bengaluru,India,Corporate,2022-11-12
+C0041,Vikram Bernard,vikram.bernard41@example.com,Manchester,UK,Consumer,2023-04-20
+C0042,Felix Wilson,felix.wilson42@example.com,New York,USA,Consumer,2022-01-31
+C0043,Meera Jones,meera.jones43@example.com,Bengaluru,India,Consumer,2022-04-16
+C0044,Meera Bernard,meera.bernard44@example.com,New York,USA,Small Business,2022-05-05
+C0045,Zoe Bernard,zoe.bernard45@example.com,Munich,Germany,Consumer,2022-09-11
+C0046,Liam Sharma,liam.sharma46@example.com,Dublin,Ireland,Consumer,2023-12-01
+C0047,Ethan Lopez,ethan.lopez47@example.com,London,UK,Consumer,2022-03-02
+C0048,Jonas Kelly,jonas.kelly48@example.com,Munich,Germany,Consumer,2023-11-16
+C0049,Mateo Kelly,mateo.kelly49@example.com,New York,USA,Consumer,2022-07-14
+C0050,Mateo Martin,mateo.martin50@example.com,New York,USA,Consumer,2022-11-17
+C0051,Noah Fernandez,noah.fernandez51@example.com,London,UK,Consumer,2023-10-17
+C0052,Olivia Dubois,olivia.dubois52@example.com,Lyon,France,Corporate,2022-03-21
+C0053,Ananya Smith,ananya.smith53@example.com,Paris,France,Corporate,2023-04-27
+C0054,Ryan Lopez,ryan.lopez54@example.com,Lyon,France,Small Business,2022-03-20
+C0055,Zoe Menon,zoe.menon55@example.com,Paris,France,Consumer,2022-01-28
+C0056,Mateo Taylor,mateo.taylor56@example.com,Lyon,France,Corporate,2023-08-29
+C0057,Ryan Jones,ryan.jones57@example.com,Dublin,Ireland,Consumer,2023-11-27
+C0058,Hugo Martin,hugo.martin58@example.com,Chicago,USA,Small Business,2022-07-06
+C0059,Meera Nair,meera.nair59@example.com,Madrid,Spain,Consumer,2022-02-02
+C0060,Zoe Roy,zoe.roy60@example.com,Dublin,Ireland,Corporate,2023-10-13
+C0061,Lucia Miller,lucia.miller61@example.com,Paris,France,Consumer,2023-10-15
+C0062,Ethan Jones,ethan.jones62@example.com,London,UK,Corporate,2023-07-18
+C0063,Lucas Taylor,lucas.taylor63@example.com,Chicago,USA,Corporate,2022-03-10
+C0064,Emma Singh,emma.singh64@example.com,London,UK,Consumer,2023-11-15
+C0065,Aarav Reddy,aarav.reddy65@example.com,London,UK,Consumer,2023-08-30
+C0066,Felix Gupta,felix.gupta66@example.com,Berlin,Germany,Small Business,2023-03-14
+C0067,Priya Gupta,priya.gupta67@example.com,Paris,France,Corporate,2022-08-15
+C0068,Olivia Roy,olivia.roy68@example.com,Munich,Germany,Consumer,2023-01-01
+C0069,Ryan Sharma,ryan.sharma69@example.com,Dublin,Ireland,Consumer,2022-06-17
+C0070,Aarav Fischer,aarav.fischer70@example.com,Toronto,Canada,Consumer,2022-03-30
+C0071,Grace Fischer,grace.fischer71@example.com,Chennai,India,Consumer,2023-03-01
+C0072,Lucia Fernandez,lucia.fernandez72@example.com,London,UK,Corporate,2023-06-07
+C0073,Diego Reddy,diego.reddy73@example.com,Munich,Germany,Small Business,2022-04-01
+C0074,Rohan Taylor,rohan.taylor74@example.com,Toronto,Canada,Consumer,2022-08-08
+C0075,Chloe Schmidt,chloe.schmidt75@example.com,Lyon,France,Consumer,2023-11-29
+C0076,Ryan Davis,ryan.davis76@example.com,Munich,Germany,Consumer,2022-01-19
+C0077,Vikram Schmidt,vikram.schmidt77@example.com,New York,USA,Consumer,2022-03-19
+C0078,Felix Wilson,felix.wilson78@example.com,London,UK,Consumer,2023-12-07
+C0079,Meera Davis,meera.davis79@example.com,Chennai,India,Consumer,2023-08-11
+C0080,Lea Lopez,lea.lopez80@example.com,New York,USA,Consumer,2022-01-14
+C0081,Liam Fernandez,liam.fernandez81@example.com,Paris,France,Consumer,2023-08-05
+C0082,Noah Martin,noah.martin82@example.com,Chennai,India,Small Business,2023-03-19
+C0083,Felix Moreau,felix.moreau83@example.com,Lyon,France,Consumer,2022-10-29
+C0084,Grace Wilson,grace.wilson84@example.com,Manchester,UK,Small Business,2023-04-21
+C0085,Liam Murphy,liam.murphy85@example.com,Madrid,Spain,Consumer,2022-06-30
+C0086,Zoe Garcia,zoe.garcia86@example.com,New York,USA,Consumer,2023-08-20
+C0087,Owen Patel,owen.patel87@example.com,Munich,Germany,Consumer,2023-03-10
+C0088,Meera Fernandez,meera.fernandez88@example.com,Lyon,France,Consumer,2022-08-15
+C0089,Grace Davis,grace.davis89@example.com,Mumbai,India,Consumer,2022-05-01
+C0090,Isabella Nair,isabella.nair90@example.com,Munich,Germany,Consumer,2022-03-26
+C0091,Mia Patel,mia.patel91@example.com,Dublin,Ireland,Consumer,2022-05-08
+C0092,Lucas Bernard,lucas.bernard92@example.com,Madrid,Spain,Consumer,2023-05-12
+C0093,Diego Jones,diego.jones93@example.com,Toronto,Canada,Small Business,2023-01-04
+C0094,Hannah Johnson,hannah.johnson94@example.com,Madrid,Spain,Consumer,2022-02-01
+C0095,Owen Singh,owen.singh95@example.com,Paris,France,Consumer,2022-07-02
+C0096,Ryan Wilson,ryan.wilson96@example.com,Paris,France,Consumer,2022-02-05
+C0097,Grace Martin,grace.martin97@example.com,Chicago,USA,Corporate,2022-03-16
+C0098,Ananya Patel,ananya.patel98@example.com,Berlin,Germany,Consumer,2023-11-07
+C0099,Lucia Johnson,lucia.johnson99@example.com,New York,USA,Small Business,2023-10-21
+C0100,Olivia Fernandez,olivia.fernandez100@example.com,Mumbai,India,Corporate,2023-07-24
+C0101,Hugo Lopez,hugo.lopez101@example.com,Chennai,India,Consumer,2022-04-09
+C0102,Olivia Martin,olivia.martin102@example.com,Toronto,Canada,Consumer,2023-09-19
+C0103,Hannah Taylor,hannah.taylor103@example.com,Bengaluru,India,Consumer,2023-04-12
+C0104,Priya Nair,priya.nair104@example.com,Munich,Germany,Consumer,2022-12-15
+C0105,Hugo Menon,hugo.menon105@example.com,Lyon,France,Consumer,2022-09-26
+C0106,Felix Jones,felix.jones106@example.com,Munich,Germany,Corporate,2022-10-05
+C0107,Kavya Smith,kavya.smith107@example.com,New York,USA,Small Business,2023-11-24
+C0108,Lucia Kelly,lucia.kelly108@example.com,Chennai,India,Consumer,2022-08-28
+C0109,Ryan Johnson,ryan.johnson109@example.com,Munich,Germany,Corporate,2023-04-22
+C0110,Mateo Martin,mateo.martin110@example.com,Chennai,India,Consumer,2023-04-08
+C0111,Meera Garcia,meera.garcia111@example.com,London,UK,Corporate,2022-05-28
+C0112,Chloe Johnson,chloe.johnson112@example.com,Chicago,USA,Corporate,2022-04-07
+C0113,Lea Iyer,lea.iyer113@example.com,Mumbai,India,Consumer,2023-06-14
+C0114,Chloe Tremblay,chloe.tremblay114@example.com,Chennai,India,Small Business,2022-04-11
+C0115,Meera Fernandez,meera.fernandez115@example.com,Berlin,Germany,Corporate,2023-03-10
+C0116,Zoe Lopez,zoe.lopez116@example.com,Toronto,Canada,Consumer,2023-11-22
+C0117,Mia Bernard,mia.bernard117@example.com,London,UK,Corporate,2022-03-11
+C0118,Meera Gupta,meera.gupta118@example.com,Manchester,UK,Consumer,2023-02-17
+C0119,Ethan Murphy,ethan.murphy119@example.com,Bengaluru,India,Corporate,2023-01-17
+C0120,Grace Lopez,grace.lopez120@example.com,Madrid,Spain,Consumer,2022-12-26
+C0121,Vikram Davis,vikram.davis121@example.com,New York,USA,Consumer,2022-03-29
+C0122,Mia Iyer,mia.iyer122@example.com,Munich,Germany,Consumer,2023-04-26
+C0123,Grace Lopez,grace.lopez123@example.com,Dublin,Ireland,Consumer,2023-05-05
+C0124,Felix Miller,felix.miller124@example.com,New York,USA,Consumer,2023-07-11
+C0125,Hannah Brown,hannah.brown125@example.com,Madrid,Spain,Consumer,2022-08-18
+C0126,Ryan Nair,ryan.nair126@example.com,Manchester,UK,Consumer,2023-11-15
+C0127,Felix Taylor,felix.taylor127@example.com,Manchester,UK,Consumer,2023-06-17
+C0128,Ryan Tremblay,ryan.tremblay128@example.com,Berlin,Germany,Consumer,2023-07-24
+C0129,Vikram Taylor,vikram.taylor129@example.com,Bengaluru,India,Corporate,2023-12-22
+C0130,Lucia Tremblay,lucia.tremblay130@example.com,Berlin,Germany,Small Business,2022-03-28
+C0131,Owen Schmidt,owen.schmidt131@example.com,Manchester,UK,Consumer,2022-03-31
+C0132,Aarav Fischer,aarav.fischer132@example.com,Madrid,Spain,Consumer,2022-01-09
+C0133,Mia Fernandez,mia.fernandez133@example.com,Munich,Germany,Consumer,2022-08-04
+C0134,Olivia Murphy,olivia.murphy134@example.com,London,UK,Small Business,2022-08-09
+C0135,Felix Lopez,felix.lopez135@example.com,Madrid,Spain,Small Business,2022-03-22
+C0136,Priya Miller,priya.miller136@example.com,Bengaluru,India,Corporate,2022-07-27
+C0137,Priya Reddy,priya.reddy137@example.com,Bengaluru,India,Corporate,2023-12-31
+C0138,Vikram Schmidt,vikram.schmidt138@example.com,Mumbai,India,Small Business,2022-03-08
+C0139,Lucia Sharma,lucia.sharma139@example.com,Paris,France,Consumer,2022-06-25
+C0140,Lucia Lopez,lucia.lopez140@example.com,New York,USA,Small Business,2022-05-25
+C0141,Liam Schmidt,liam.schmidt141@example.com,Chicago,USA,Consumer,2022-01-27
+C0142,Vikram Patel,vikram.patel142@example.com,New York,USA,Corporate,2023-03-19
+C0143,Ryan Singh,ryan.singh143@example.com,Lyon,France,Consumer,2023-09-13
+C0144,Jonas Fernandez,jonas.fernandez144@example.com,Toronto,Canada,Corporate,2023-11-09
+C0145,Lucia Fischer,lucia.fischer145@example.com,New York,USA,Consumer,2023-09-04
+C0146,Sofia Menon,sofia.menon146@example.com,Manchester,UK,Consumer,2022-04-02
+C0147,Mateo Garcia,mateo.garcia147@example.com,Madrid,Spain,Small Business,2023-04-05
+C0148,Sofia Nair,sofia.nair148@example.com,New York,USA,Consumer,2023-06-21
+C0149,Aarav Smith,aarav.smith149@example.com,Manchester,UK,Small Business,2023-06-03
+C0150,Felix Moreau,felix.moreau150@example.com,Madrid,Spain,Corporate,2022-02-09
+C0151,Aarav Patel,aarav.patel151@example.com,Paris,France,Corporate,2023-10-08
+C0152,Lucas Gupta,lucas.gupta152@example.com,Berlin,Germany,Consumer,2022-03-08
+C0153,Emma Roy,emma.roy153@example.com,Mumbai,India,Corporate,2022-12-01
+C0154,Kavya Schmidt,kavya.schmidt154@example.com,Chicago,USA,Consumer,2023-02-22
+C0155,Kavya Tremblay,kavya.tremblay155@example.com,Madrid,Spain,Consumer,2022-08-08
+C0156,Mateo Fischer,mateo.fischer156@example.com,Paris,France,Small Business,2023-04-19
+C0157,Vikram Nair,vikram.nair157@example.com,Munich,Germany,Consumer,2023-01-07
+C0158,Grace Kelly,grace.kelly158@example.com,Manchester,UK,Consumer,2022-03-29
+C0159,Ryan Smith,ryan.smith159@example.com,Manchester,UK,Consumer,2022-08-11
+C0160,Hannah Moreau,hannah.moreau160@example.com,Berlin,Germany,Consumer,2023-04-09
+C0161,Vikram Wilson,vikram.wilson161@example.com,New York,USA,Consumer,2022-06-08
+C0162,Hugo Jones,hugo.jones162@example.com,Chicago,USA,Consumer,2022-01-27
+C0163,Ethan Kelly,ethan.kelly163@example.com,Dublin,Ireland,Consumer,2022-06-14
+C0164,Noah Dubois,noah.dubois164@example.com,Mumbai,India,Corporate,2023-05-28
+C0165,Isabella Schmidt,isabella.schmidt165@example.com,Mumbai,India,Corporate,2022-08-19
+C0166,Noah Dubois,noah.dubois166@example.com,Dublin,Ireland,Corporate,2022-11-11
+C0167,Chloe Brown,chloe.brown167@example.com,Toronto,Canada,Corporate,2023-01-10
+C0168,Mateo Miller,mateo.miller168@example.com,Manchester,UK,Consumer,2023-11-04
+C0169,Felix Martin,felix.martin169@example.com,Paris,France,Consumer,2023-08-07
+C0170,Chloe Johnson,chloe.johnson170@example.com,Berlin,Germany,Consumer,2022-12-27
+C0171,Priya Iyer,priya.iyer171@example.com,Chicago,USA,Consumer,2023-09-07
+C0172,Rohan Smith,rohan.smith172@example.com,Madrid,Spain,Consumer,2022-09-01
+C0173,Mia Jones,mia.jones173@example.com,London,UK,Consumer,2023-06-27
+C0174,Sofia Fernandez,sofia.fernandez174@example.com,Bengaluru,India,Consumer,2023-09-18
+C0175,Mia Nair,mia.nair175@example.com,Paris,France,Consumer,2023-03-15
+C0176,Chloe Brown,chloe.brown176@example.com,Madrid,Spain,Small Business,2023-12-01
+C0177,Sofia Lopez,sofia.lopez177@example.com,Berlin,Germany,Corporate,2022-08-16
+C0178,Vikram Weber,vikram.weber178@example.com,Chennai,India,Corporate,2022-10-11
+C0179,Noah Sharma,noah.sharma179@example.com,Bengaluru,India,Consumer,2022-06-02
+C0180,Ethan Nair,ethan.nair180@example.com,Bengaluru,India,Corporate,2022-05-02
+C0181,Grace Roy,grace.roy181@example.com,Toronto,Canada,Corporate,2023-02-10
+C0182,Diego Roy,diego.roy182@example.com,Bengaluru,India,Consumer,2022-04-14
+C0183,Lucia Taylor,lucia.taylor183@example.com,Lyon,France,Corporate,2022-02-28
+C0184,Priya Murphy,priya.murphy184@example.com,Munich,Germany,Consumer,2022-12-09
+C0185,Olivia Gupta,olivia.gupta185@example.com,Paris,France,Consumer,2023-10-25
+C0186,Hugo Menon,hugo.menon186@example.com,Dublin,Ireland,Consumer,2022-08-02
+C0187,Zoe Bernard,zoe.bernard187@example.com,Chennai,India,Consumer,2022-12-27
+C0188,Liam Singh,liam.singh188@example.com,New York,USA,Corporate,2023-09-08
+C0189,Mateo Schmidt,mateo.schmidt189@example.com,Berlin,Germany,Corporate,2023-05-05
+C0190,Hugo Patel,hugo.patel190@example.com,Chennai,India,Consumer,2022-09-25
+C0191,Owen Brown,owen.brown191@example.com,Toronto,Canada,Consumer,2023-09-09
+C0192,Chloe Lopez,chloe.lopez192@example.com,Bengaluru,India,Consumer,2023-09-14
+C0193,Lucas Davis,lucas.davis193@example.com,Lyon,France,Small Business,2023-03-05
+C0194,Emma Brown,emma.brown194@example.com,Mumbai,India,Consumer,2022-12-31
+C0195,Chloe Reddy,chloe.reddy195@example.com,London,UK,Small Business,2022-10-18
+C0196,Hugo Moreau,hugo.moreau196@example.com,Berlin,Germany,Consumer,2022-05-10
+C0197,Olivia Gupta,olivia.gupta197@example.com,Paris,France,Small Business,2022-01-19
+C0198,Jonas Murphy,jonas.murphy198@example.com,Berlin,Germany,Consumer,2022-08-13
+C0199,Mateo Sharma,mateo.sharma199@example.com,Berlin,Germany,Corporate,2022-07-22
+C0200,Chloe Schmidt,chloe.schmidt200@example.com,Bengaluru,India,Corporate,2023-12-18
+C0201,Owen Kelly,owen.kelly201@example.com,Toronto,Canada,Small Business,2023-07-10
+C0202,Chloe Weber,chloe.weber202@example.com,Paris,France,Corporate,2023-12-05
+C0203,Sofia Miller,sofia.miller203@example.com,Manchester,UK,Corporate,2022-03-25
+C0204,Diego Murphy,diego.murphy204@example.com,Bengaluru,India,Corporate,2023-02-08
+C0205,Lucas Roy,lucas.roy205@example.com,Manchester,UK,Consumer,2023-12-20
+C0206,Diego Garcia,diego.garcia206@example.com,Toronto,Canada,Consumer,2023-07-02
+C0207,Aarav Reddy,aarav.reddy207@example.com,Lyon,France,Corporate,2022-01-30
+C0208,Ryan Kelly,ryan.kelly208@example.com,Chicago,USA,Consumer,2023-12-21
+C0209,Olivia Roy,olivia.roy209@example.com,Paris,France,Corporate,2022-10-28
+C0210,Lea Iyer,lea.iyer210@example.com,Paris,France,Corporate,2023-02-10
+C0211,Kavya Davis,kavya.davis211@example.com,Munich,Germany,Consumer,2023-08-24
+C0212,Priya Taylor,priya.taylor212@example.com,Toronto,Canada,Consumer,2022-02-05
+C0213,Grace Fischer,grace.fischer213@example.com,Chennai,India,Corporate,2023-06-05
+C0214,Aarav Johnson,aarav.johnson214@example.com,Chennai,India,Corporate,2023-06-24
+C0215,Emma Patel,emma.patel215@example.com,Chicago,USA,Corporate,2022-06-21
+C0216,Kavya Johnson,kavya.johnson216@example.com,Munich,Germany,Consumer,2022-01-04
+C0217,Kavya Fischer,kavya.fischer217@example.com,Madrid,Spain,Consumer,2022-01-22
+C0218,Jonas Miller,jonas.miller218@example.com,Mumbai,India,Consumer,2023-05-06
+C0219,Lucas Johnson,lucas.johnson219@example.com,Madrid,Spain,Small Business,2022-09-12
+C0220,Grace Smith,grace.smith220@example.com,Bengaluru,India,Consumer,2023-03-07
+C0221,Ananya Smith,ananya.smith221@example.com,Madrid,Spain,Consumer,2023-10-10
+C0222,Jonas Iyer,jonas.iyer222@example.com,Bengaluru,India,Corporate,2022-09-07
+C0223,Lucas Fernandez,lucas.fernandez223@example.com,Madrid,Spain,Consumer,2023-12-31
+C0224,Hannah Wilson,hannah.wilson224@example.com,Madrid,Spain,Consumer,2022-04-10
+C0225,Meera Roy,meera.roy225@example.com,New York,USA,Consumer,2023-05-27
+C0226,Priya Taylor,priya.taylor226@example.com,Munich,Germany,Consumer,2023-10-31
+C0227,Noah Nair,noah.nair227@example.com,Manchester,UK,Consumer,2022-09-24
+C0228,Noah Menon,noah.menon228@example.com,Madrid,Spain,Consumer,2022-01-13
+C0229,Ryan Schmidt,ryan.schmidt229@example.com,Chicago,USA,Consumer,2022-09-08
+C0230,Owen Tremblay,owen.tremblay230@example.com,Toronto,Canada,Consumer,2023-07-03
+C0231,Zoe Smith,zoe.smith231@example.com,Lyon,France,Consumer,2023-10-17
+C0232,Mateo Jones,mateo.jones232@example.com,Chicago,USA,Consumer,2023-10-26
+C0233,Zoe Garcia,zoe.garcia233@example.com,Paris,France,Corporate,2023-03-08
+C0234,Aarav Smith,aarav.smith234@example.com,New York,USA,Consumer,2022-06-26
+C0235,Meera Nair,meera.nair235@example.com,Lyon,France,Consumer,2023-10-01
+C0236,Priya Dubois,priya.dubois236@example.com,Paris,France,Corporate,2023-08-02
+C0237,Lea Murphy,lea.murphy237@example.com,Chicago,USA,Small Business,2022-12-14
+C0238,Isabella Fischer,isabella.fischer238@example.com,Paris,France,Small Business,2023-08-18
+C0239,Liam Lopez,liam.lopez239@example.com,Munich,Germany,Consumer,2022-05-16
+C0240,Olivia Reddy,olivia.reddy240@example.com,Berlin,Germany,Small Business,2023-04-22
+C0241,Hannah Martin,hannah.martin241@example.com,Toronto,Canada,Consumer,2022-11-13
+C0242,Ryan Tremblay,ryan.tremblay242@example.com,Chennai,India,Consumer,2022-03-17
+C0243,Priya Singh,priya.singh243@example.com,Mumbai,India,Consumer,2022-02-17
+C0244,Kavya Martin,kavya.martin244@example.com,New York,USA,Consumer,2022-08-17
+C0245,Lucia Reddy,lucia.reddy245@example.com,Mumbai,India,Consumer,2022-10-08
+C0246,Owen Fischer,owen.fischer246@example.com,Munich,Germany,Consumer,2022-06-01
+C0247,Ethan Taylor,ethan.taylor247@example.com,Paris,France,Consumer,2022-11-01
+C0248,Liam Reddy,liam.reddy248@example.com,Berlin,Germany,Consumer,2023-09-22
+C0249,Ananya Martin,ananya.martin249@example.com,Paris,France,Consumer,2022-12-24
+C0250,Lucas Wilson,lucas.wilson250@example.com,Madrid,Spain,Corporate,2023-07-24

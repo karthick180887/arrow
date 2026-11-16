@@ -1,0 +1,25 @@
+staff_id,name,role,department,manager_id,salary,hire_date
+S01,Liam Menon,Chief Executive,Management,,180000,2021-05-21
+S02,Lucas Schmidt,Head of Sales,Sales,S01,120000,2020-02-02
+S03,Diego Iyer,Head of Support,Support,S01,105000,2023-08-31
+S04,Aarav Garcia,Head of Operations,Operations,S01,110000,2020-04-11
+S05,Emma Sharma,Sales Team Lead,Sales,S02,82000,2019-02-02
+S06,Lea Weber,Sales Team Lead,Sales,S02,84000,2022-08-27
+S07,Olivia Garcia,Sales Rep,Sales,S05,52000,2020-02-01
+S08,Ananya Miller,Sales Rep,Sales,S05,46000,2021-11-26
+S09,Kavya Reddy,Sales Rep,Sales,S05,52000,2018-12-11
+S10,Jonas Fischer,Sales Rep,Sales,S05,46000,2019-02-20
+S11,Hannah Martin,Sales Rep,Sales,S06,46000,2024-07-08
+S12,Kavya Sharma,Sales Rep,Sales,S06,52000,2018-02-09
+S13,Mateo Roy,Sales Rep,Sales,S06,50000,2021-11-04
+S14,Emma Reddy,Sales Rep,Sales,S06,50000,2023-11-24
+S15,Rohan Miller,Support Agent,Support,S03,42000,2021-07-10
+S16,Vikram Moreau,Support Agent,Support,S03,40000,2019-10-18
+S17,Mia Patel,Support Agent,Support,S03,42000,2021-11-27
+S18,Ananya Smith,Support Agent,Support,S03,42000,2022-05-12
+S19,Zoe Johnson,Support Agent,Support,S03,40000,2018-02-13
+S20,Priya Bernard,Operations Analyst,Operations,S04,52000,2019-07-10
+S21,Lucia Miller,Operations Analyst,Operations,S04,58000,2019-09-01
+S22,Hugo Moreau,Operations Analyst,Operations,S04,52000,2021-08-21
+S23,Chloe Taylor,Operations Analyst,Operations,S04,58000,2022-06-15
+S24,Chloe Weber,Operations Analyst,Operations,S04,58000,2021-09-22

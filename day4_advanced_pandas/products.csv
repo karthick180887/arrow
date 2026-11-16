@@ -1,0 +1,41 @@
+product_id,product_name,category,unit_price,unit_cost
+P001,Wireless Mouse,Electronics,24.99,13.2
+P002,Mechanical Keyboard,Electronics,89.0,48.66
+P003,USB-C Hub,Electronics,39.5,20.65
+P004,Noise-Cancelling Headphones,Electronics,199.0,118.2
+P005,Webcam 1080p,Electronics,59.0,38.64
+P006,Portable SSD 1TB,Electronics,109.0,56.51
+P007,Bluetooth Speaker,Electronics,49.9,27.41
+P008,Smart Watch,Electronics,179.0,130.51
+P009,Electric Kettle,Home,34.5,16.03
+P010,Air Fryer,Home,119.0,70.0
+P011,Desk Lamp,Home,27.0,17.91
+P012,Memory Foam Pillow,Home,42.0,20.8
+P013,Cast Iron Pan,Home,38.0,17.64
+P014,Vacuum Flask,Home,21.5,10.57
+P015,Wall Clock,Home,18.0,13.06
+P016,Storage Box Set,Home,29.0,13.13
+P017,Yoga Mat,Sports,25.0,12.66
+P018,Resistance Bands,Sports,15.5,7.12
+P019,Running Shoes,Sports,95.0,45.9
+P020,Cycling Helmet,Sports,64.0,40.71
+P021,Dumbbell Pair 5kg,Sports,45.0,23.51
+P022,Skipping Rope,Sports,9.9,6.15
+P023,Tennis Racket,Sports,129.0,80.89
+P024,Water Bottle,Sports,12.0,8.46
+P025,Python Basics Guide,Books,32.0,14.45
+P026,SQL Query Workbook,Books,41.0,28.95
+P027,Data Science Handbook,Books,48.0,30.52
+P028,Statistics Primer,Books,27.5,13.72
+P029,Clean Coding Guide,Books,36.0,24.55
+P030,Data Systems Design,Books,52.0,36.75
+P031,Charts That Work,Books,30.0,15.79
+P032,Pandas in Practice,Books,39.0,28.3
+P033,Building Blocks 500pc,Toys,44.0,25.8
+P034,Puzzle 1000pc,Toys,16.0,10.1
+P035,Remote Control Car,Toys,58.0,43.23
+P036,Board Game Classic,Toys,28.0,15.64
+P037,Plush Bear,Toys,14.5,10.06
+P038,Science Kit,Toys,35.0,19.09
+P039,Drawing Tablet Kids,Toys,49.0,33.8
+P040,Kite,Toys,11.0,6.93
