@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forward Propagation — Numerical Walkthrough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf4;
+    --grid: #d9e6f2;
+    --ink: #1a1a2e;
+    --blue: #2b6cb0;
+    --teal: #14939c;
+    --green: #2f855a;
+    --orange: #c05621;
+    --purple: #6b46c1;
+    --pink: #b83280;
+    --red: #c53030;
+    --yellow-bg: #fff3a3;
+    --green-bg: #c6f6d5;
+    --blue-bg: #bee3f8;
+    --pink-bg: #fed7e2;
+    --purple-bg: #e9d8fd;
+    --orange-bg: #feebc8;
+    --teal-bg: #b2f5ea;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Kalam', cursive;
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+    color: var(--ink);
+    padding: 40px 20px 80px;
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3.4rem;
+    color: var(--blue);
+    border-bottom: 3px solid var(--blue);
+    display: inline-block;
+    padding-bottom: 4px;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: 36px;
+    opacity: 0.75;
+  }
+
+  h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.4rem;
+    color: var(--teal);
+    border-bottom: 2.5px solid var(--teal);
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 1.9rem;
+    color: var(--purple);
+    margin-top: 28px;
+    margin-bottom: 10px;
+  }
+
+  p, li { font-size: 1.15rem; }
+
+  /* highlighted callouts (handwritten marker style) */
+  .hl { padding: 2px 10px; border-radius: 6px; font-family: 'Caveat', cursive; font-size: 1.3rem; font-weight: 600; }
+  .hl-yellow { background: var(--yellow-bg); }
+  .hl-green { background: var(--green-bg); color: var(--green); }
+  .hl-blue { background: var(--blue-bg); color: var(--blue); }
+  .hl-pink { background: var(--pink-bg); color: var(--pink); }
+  .hl-purple { background: var(--purple-bg); color: var(--purple); }
+  .hl-orange { background: var(--orange-bg); color: var(--orange); }
+  .hl-teal { background: var(--teal-bg); color: var(--teal); }
+
+  /* architecture summary box */
+  .arch-box {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2.5px dashed var(--blue);
+    border-radius: 14px;
+    padding: 18px 24px;
+    margin: 20px 0;
+  }
+  .arch-box ul { margin: 8px 0; padding-left: 22px; }
+  .arch-box li { margin: 4px 0; }
+
+  /* matrices */
+  .matrix-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 18px 0;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+  }
+  .label {
+    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .label .sub { font-size: 1rem; vertical-align: sub; }
+  .equals { font-family: 'Caveat', cursive; font-size: 1.8rem; }
+
+  .matrix {
+    display: inline-block;
+    padding: 8px 16px;
+    border-left: 3px solid var(--ink);
+    border-right: 3px solid var(--ink);
+    border-radius: 4px;
+    position: relative;
+  }
+  .matrix::before, .matrix::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 3px;
+    background: var(--ink);
+    left: -3px;
+  }
+  .matrix::before { top: 0; }
+  .matrix::after { bottom: 0; }
+  .matrix .right-bracket::before,
+  .matrix .right-bracket::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 3px;
+    background: var(--ink);
+    right: -3px;
+  }
+  .matrix .right-bracket::before { top: 0; }
+  .matrix .right-bracket::after { bottom: 0; }
+
+  .matrix table { border-collapse: collapse; }
+  .matrix td {
+    padding: 4px 12px;
+    text-align: right;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.15rem;
+    min-width: 44px;
+  }
+  .shape {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    color: var(--orange);
+    font-style: italic;
+  }
+
+  /* step container */
+  .step {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 16px;
+    padding: 22px 28px;
+    margin: 28px 0;
+    border-left: 6px solid var(--teal);
+    box-shadow: 2px 3px 0 rgba(20, 147, 156, 0.15);
+  }
+  .step.layer1 { border-left-color: var(--green); box-shadow: 2px 3px 0 rgba(47, 133, 90, 0.15); }
+  .step.layer2 { border-left-color: var(--orange); box-shadow: 2px 3px 0 rgba(192, 86, 33, 0.15); }
+  .step.output { border-left-color: var(--red); box-shadow: 2px 3px 0 rgba(197, 48, 48, 0.15); }
+
+  .step-title {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+  .layer1 .step-title { color: var(--green); }
+  .layer2 .step-title { color: var(--orange); }
+  .output .step-title { color: var(--red); }
+
+  /* expanded calculation block */
+  .expanded {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1.5px dashed #aaa;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 14px 0;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1rem;
+  }
+  .expanded .calc-label {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--purple);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .expanded .line { margin: 4px 0; }
+  .arrow { color: var(--blue); font-weight: 700; padding: 0 6px; }
+  .result-num { background: var(--yellow-bg); padding: 0 8px; border-radius: 4px; font-weight: 700; }
+
+  /* activation note */
+  .activation-note {
+    display: inline-block;
+    background: var(--purple-bg);
+    color: var(--purple);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+
+  /* final box */
+  .final-prediction {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 3px solid var(--red);
+    border-radius: 18px;
+    padding: 28px;
+    margin: 32px 0;
+    text-align: center;
+    box-shadow: 4px 5px 0 rgba(197, 48, 48, 0.2);
+  }
+  .final-prediction .big-result {
+    font-family: 'Caveat', cursive;
+    font-size: 3.2rem;
+    color: var(--red);
+    font-weight: 700;
+    margin: 8px 0;
+  }
+  .final-prediction .label-text {
+    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    color: var(--ink);
+  }
+
+  /* flow summary */
+  .flow-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0;
+    padding: 22px;
+    background: rgba(255,255,255,0.55);
+    border-radius: 14px;
+    border: 2px dotted var(--teal);
+  }
+  .flow-node {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+  }
+  .flow-node.input { background: var(--green); }
+  .flow-node.h1 { background: var(--teal); }
+  .flow-node.h2 { background: var(--orange); }
+  .flow-node.out { background: var(--red); }
+  .flow-arrow {
+    font-size: 2rem;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* small details */
+  code {
+    font-family: 'Patrick Hand', cursive;
+    background: rgba(255,255,255,0.7);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 1.05rem;
+  }
+  .note {
+    font-family: 'Caveat', cursive;
+    font-size: 1.25rem;
+    color: var(--orange);
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  /* activation function helper boxes */
+  .helper {
+    display: inline-block;
+    background: rgba(255,255,255,0.7);
+    border: 1.5px solid var(--purple);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 6px 8px 6px 0;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.05rem;
+  }
+
+  .red-text { color: var(--red); font-weight: 700; }
+  .green-text { color: var(--green); font-weight: 700; }
+  .orange-text { color: var(--orange); font-weight: 700; }
+  .blue-text { color: var(--blue); font-weight: 700; }
+  .purple-text { color: var(--purple); font-weight: 700; }
+
+  @media (max-width: 720px) {
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.8rem; }
+    .matrix td { padding: 3px 8px; font-size: 1rem; min-width: 36px; }
+    .step { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Forward Propagation — Numerical Walkthrough</h1>
+  <div class="subtitle">A 3 → 4 → 4 → 1 neural network · ReLU hidden · Sigmoid output</div>
+
+  <!-- ARCHITECTURE -->
+  <h2>1. Network Architecture</h2>
+  <div class="arch-box">
+    <ul>
+      <li><span class="hl hl-green">Input Layer</span> &nbsp; 3 neurons &nbsp; <span class="shape">→ x ∈ ℝ³ˣ¹</span></li>
+      <li><span class="hl hl-teal">Hidden Layer 1</span> &nbsp; 4 neurons &nbsp; <span class="shape">→ z₁, a₁ ∈ ℝ⁴ˣ¹</span></li>
+      <li><span class="hl hl-orange">Hidden Layer 2</span> &nbsp; 4 neurons &nbsp; <span class="shape">→ z₂, a₂ ∈ ℝ⁴ˣ¹</span></li>
+      <li><span class="hl hl-pink">Output Layer</span> &nbsp; 1 neuron &nbsp; <span class="shape">→ ŷ ∈ ℝ¹ˣ¹</span></li>
+    </ul>
+  </div>
+
+  <div class="flow-summary">
+    <span class="flow-node input">x (3)</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-node h1">H₁ (4)</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-node h2">H₂ (4)</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-node out">ŷ (1)</span>
+  </div>
+
+  <div>
+    <span class="helper"><span class="purple-text">ReLU(z)</span> = max(0, z)</span>
+    <span class="helper"><span class="purple-text">σ(z)</span> = 1 / (1 + e<sup>−z</sup>)</span>
+  </div>
+
+  <!-- INITIAL VALUES -->
+  <h2>2. Inputs, Weights &amp; Biases</h2>
+
+  <h3>Input vector x</h3>
+  <div class="matrix-wrap">
+    <span class="label">x =</span>
+    <div class="matrix"><span class="right-bracket"></span>
+      <table><tr><td>1.0</td></tr><tr><td>0.5</td></tr><tr><td>−1.0</td></tr></table>
+    </div>
+    <span class="shape">(3 × 1)</span>
+  </div>
+
+  <h3>Layer 1 parameters — W₁, b₁</h3>
+  <div class="matrix-wrap">
+    <span class="label">W<span class="sub">1</span> =</span>
+    <div class="matrix"><span class="right-bracket"></span>
+      <table>
+        <tr><td>0.2</td><td>0.4</td><td>−0.1</td></tr>
+        <tr><td>−0.3</td><td>0.1</td><td>0.5</td></tr>
+        <tr><td>0.6</td><td>−0.2</td><td>0.3</td></tr>
+        <tr><td>0.1</td><td>0.5</td><td>−0.4</td></tr>
+      </table>
+    </div>
+    <span class="shape">(4 × 3)</span>
+    <span class="label" style="margin-left:18px;">b<span class="sub">1</span> =</span>
+    <div class="matrix"><span class="right-bracket"></span>
+      <table><tr><td>0.1</td></tr><tr><td>−0.2</td></tr><tr><td>0.0</td></tr><tr><td>0.3</td></tr></table>
+    </div>
+    <span class="shape">(4 × 1)</span>
+  </div>
+
+  <h3>Layer 2 parameters — W₂, b₂</h3>
+  <div class="matrix-wrap">
+    <span class="label">W<span class="sub">2</span> =</span>
+    <div class="matrix"><span class="right-bracket"></span>
+      <table>
+        <tr><td>0.3</td><td>−0.1</td><td>0.2</td><td>0.4</td></tr>
+        <tr><td>0.1</td><td>0.5</td><td>−0.3</td><td>0.2</td></tr>
+        <tr><td>−0.2</td><td>0.4</td><td>0.1</td><td>−0.1</td></tr>
+        <tr><td>0.5</td><td>−0.3</td><td>0.2</td><td>0.1</td></tr>
+      </table>
+    </div>
+    <span class="shape">(4 × 4)</span>
+    <span class="label" style="margin-left:18px;">b<span class="sub">2</span> =</span>
+    <div class="matrix"><span class="right-bracket"></span>
+      <table><tr><td>0.0</td></tr><tr><td>0.1</td></tr><tr><td>−0.1</td></tr><tr><td>0.2</td></tr></table>
+    </div>
+    <span class="shape">(4 × 1)</span>
+  </div>
+
+  <h3>Output layer parameters — W₃, b₃</h3>
+  <div class="matrix-wrap">
+    <span class="label">W<span class="sub">3</span> =</span>
+    <div class="matrix"><span class="right-bracket"></span>
+      <table><tr><td>0.4</td><td>−0.2</td><td>0.5</td><td>0.3</td></tr></table>
+    </div>
+    <span class="shape">(1 × 4)</span>
+    <span class="label" style="margin-left:18px;">b<span class="sub">3</span> =</span>
+    <div class="matrix"><span class="right-bracket"></span>
+      <table><tr><td>0.1</td></tr></table>
+    </div>
+    <span class="shape">(1 × 1)</span>
+  </div>
+
+  <!-- STEP 1 -->
+  <h2>3. Forward Pass — Step by Step</h2>
+
+  <div class="step layer1">
+    <div class="step-title">Step 1 → Hidden Layer 1 :  z₁ = W₁ · x + b₁</div>
+    <p><span class="hl hl-blue">Shape check:</span> &nbsp; (4×3) · (3×1) + (4×1) &nbsp; → &nbsp; (4×1) ✓</p>
+
+    <div class="matrix-wrap">
+      <span class="label">z<span class="sub">1</span> =</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table>
+          <tr><td>0.2</td><td>0.4</td><td>−0.1</td></tr>
+          <tr><td>−0.3</td><td>0.1</td><td>0.5</td></tr>
+          <tr><td>0.6</td><td>−0.2</td><td>0.3</td></tr>
+          <tr><td>0.1</td><td>0.5</td><td>−0.4</td></tr>
+        </table>
+      </div>
+      <span class="equals">·</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>1.0</td></tr><tr><td>0.5</td></tr><tr><td>−1.0</td></tr></table>
+      </div>
+      <span class="equals">+</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.1</td></tr><tr><td>−0.2</td></tr><tr><td>0.0</td></tr><tr><td>0.3</td></tr></table>
+      </div>
+      <span class="equals">=</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.60</td></tr><tr><td>−0.95</td></tr><tr><td>0.20</td></tr><tr><td>1.05</td></tr></table>
+      </div>
+    </div>
+
+    <div class="expanded">
+      <div class="calc-label">🔍 Expanded — neuron H₁₁ (row 1 of z₁)</div>
+      <div class="line">z₁[1] &nbsp;=&nbsp; (0.2)(1.0) + (0.4)(0.5) + (−0.1)(−1.0) &nbsp;+&nbsp; 0.1</div>
+      <div class="line">&nbsp; &nbsp; &nbsp; &nbsp;=&nbsp; 0.20 + 0.20 + 0.10 + 0.10 <span class="arrow">→</span> <span class="result-num">0.60</span></div>
+    </div>
+
+    <div class="expanded">
+      <div class="calc-label">🔍 Expanded — neuron H₁₄ (row 4 of z₁)</div>
+      <div class="line">z₁[4] &nbsp;=&nbsp; (0.1)(1.0) + (0.5)(0.5) + (−0.4)(−1.0) &nbsp;+&nbsp; 0.3</div>
+      <div class="line">&nbsp; &nbsp; &nbsp; &nbsp;=&nbsp; 0.10 + 0.25 + 0.40 + 0.30 <span class="arrow">→</span> <span class="result-num">1.05</span></div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step layer1">
+    <div class="step-title">Step 2 → Apply Activation :  a₁ = ReLU(z₁)</div>
+    <div class="activation-note">ReLU(z) = max(0, z) &nbsp; → &nbsp; negatives become 0</div>
+
+    <div class="matrix-wrap">
+      <span class="label">a<span class="sub">1</span> = ReLU</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.60</td></tr><tr><td><span class="red-text">−0.95</span></td></tr><tr><td>0.20</td></tr><tr><td>1.05</td></tr></table>
+      </div>
+      <span class="equals">=</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td class="green-text">0.60</td></tr><tr><td class="orange-text">0.00</td></tr><tr><td class="green-text">0.20</td></tr><tr><td class="green-text">1.05</td></tr></table>
+      </div>
+    </div>
+
+    <p class="note">⚠️ Notice H₁₂ got <span class="red-text">killed</span> — its pre-activation was negative, so ReLU clipped it to 0. This neuron contributes nothing to the next layer for this input.</p>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step layer2">
+    <div class="step-title">Step 3 → Hidden Layer 2 :  z₂ = W₂ · a₁ + b₂</div>
+    <p><span class="hl hl-blue">Shape check:</span> &nbsp; (4×4) · (4×1) + (4×1) &nbsp; → &nbsp; (4×1) ✓</p>
+
+    <div class="matrix-wrap">
+      <span class="label">z<span class="sub">2</span> =</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table>
+          <tr><td>0.3</td><td>−0.1</td><td>0.2</td><td>0.4</td></tr>
+          <tr><td>0.1</td><td>0.5</td><td>−0.3</td><td>0.2</td></tr>
+          <tr><td>−0.2</td><td>0.4</td><td>0.1</td><td>−0.1</td></tr>
+          <tr><td>0.5</td><td>−0.3</td><td>0.2</td><td>0.1</td></tr>
+        </table>
+      </div>
+      <span class="equals">·</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.60</td></tr><tr><td>0.00</td></tr><tr><td>0.20</td></tr><tr><td>1.05</td></tr></table>
+      </div>
+      <span class="equals">+</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.0</td></tr><tr><td>0.1</td></tr><tr><td>−0.1</td></tr><tr><td>0.2</td></tr></table>
+      </div>
+      <span class="equals">=</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.640</td></tr><tr><td>0.310</td></tr><tr><td>−0.305</td></tr><tr><td>0.645</td></tr></table>
+      </div>
+    </div>
+
+    <div class="expanded">
+      <div class="calc-label">🔍 Expanded — neuron H₂₁ (row 1 of z₂)</div>
+      <div class="line">z₂[1] &nbsp;=&nbsp; (0.3)(0.60) + (−0.1)(0.00) + (0.2)(0.20) + (0.4)(1.05) &nbsp;+&nbsp; 0.0</div>
+      <div class="line">&nbsp; &nbsp; &nbsp; &nbsp;=&nbsp; 0.180 + 0.000 + 0.040 + 0.420 + 0.000 <span class="arrow">→</span> <span class="result-num">0.640</span></div>
+    </div>
+
+    <div class="expanded">
+      <div class="calc-label">🔍 Expanded — neuron H₂₃ (row 3 of z₂)</div>
+      <div class="line">z₂[3] &nbsp;=&nbsp; (−0.2)(0.60) + (0.4)(0.00) + (0.1)(0.20) + (−0.1)(1.05) &nbsp;+&nbsp; (−0.1)</div>
+      <div class="line">&nbsp; &nbsp; &nbsp; &nbsp;=&nbsp; −0.120 + 0.000 + 0.020 − 0.105 − 0.100 <span class="arrow">→</span> <span class="result-num">−0.305</span></div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step layer2">
+    <div class="step-title">Step 4 → Apply Activation :  a₂ = ReLU(z₂)</div>
+    <div class="activation-note">Clip negatives to zero again</div>
+
+    <div class="matrix-wrap">
+      <span class="label">a<span class="sub">2</span> = ReLU</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.640</td></tr><tr><td>0.310</td></tr><tr><td><span class="red-text">−0.305</span></td></tr><tr><td>0.645</td></tr></table>
+      </div>
+      <span class="equals">=</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td class="green-text">0.640</td></tr><tr><td class="green-text">0.310</td></tr><tr><td class="orange-text">0.000</td></tr><tr><td class="green-text">0.645</td></tr></table>
+      </div>
+    </div>
+
+    <p class="note">⚠️ H₂₃ is also killed by ReLU this round.</p>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step output">
+    <div class="step-title">Step 5 → Output Layer :  z₃ = W₃ · a₂ + b₃</div>
+    <p><span class="hl hl-blue">Shape check:</span> &nbsp; (1×4) · (4×1) + (1×1) &nbsp; → &nbsp; (1×1) ✓</p>
+
+    <div class="matrix-wrap">
+      <span class="label">z<span class="sub">3</span> =</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.4</td><td>−0.2</td><td>0.5</td><td>0.3</td></tr></table>
+      </div>
+      <span class="equals">·</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.640</td></tr><tr><td>0.310</td></tr><tr><td>0.000</td></tr><tr><td>0.645</td></tr></table>
+      </div>
+      <span class="equals">+</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.1</td></tr></table>
+      </div>
+      <span class="equals">=</span>
+      <div class="matrix"><span class="right-bracket"></span>
+        <table><tr><td>0.4875</td></tr></table>
+      </div>
+    </div>
+
+    <div class="expanded">
+      <div class="calc-label">🔍 Expanded — the single output pre-activation</div>
+      <div class="line">z₃ &nbsp;=&nbsp; (0.4)(0.640) + (−0.2)(0.310) + (0.5)(0.000) + (0.3)(0.645) &nbsp;+&nbsp; 0.1</div>
+      <div class="line">&nbsp; &nbsp; &nbsp;=&nbsp; 0.2560 − 0.0620 + 0.0000 + 0.1935 + 0.1000 <span class="arrow">→</span> <span class="result-num">0.4875</span></div>
+    </div>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step output">
+    <div class="step-title">Step 6 → Final Prediction :  ŷ = σ(z₃)</div>
+    <div class="activation-note">σ(z) = 1 / (1 + e⁻ᶻ) &nbsp; → &nbsp; squashes output to (0, 1)</div>
+
+    <div class="expanded">
+      <div class="line">ŷ &nbsp;=&nbsp; σ(0.4875) &nbsp;=&nbsp; 1 / (1 + e<sup>−0.4875</sup>)</div>
+      <div class="line">&nbsp; &nbsp; =&nbsp; 1 / (1 + 0.6142) &nbsp;=&nbsp; 1 / 1.6142 <span class="arrow">→</span> <span class="result-num">≈ 0.6195</span></div>
+    </div>
+  </div>
+
+  <!-- FINAL -->
+  <div class="final-prediction">
+    <div class="label-text">🎯 Final Network Prediction</div>
+    <div class="big-result">ŷ ≈ 0.6195</div>
+    <div class="label-text">For binary classification (threshold = 0.5) &nbsp;→&nbsp; <span class="hl hl-green">Class 1</span></div>
+  </div>
+
+  <!-- DATA FLOW -->
+  <h2>4. Data Flow Summary</h2>
+  <div class="arch-box" style="border-color: var(--purple); border-style: solid;">
+    <p style="font-family: 'Patrick Hand', cursive; font-size: 1.15rem; margin: 6px 0;">
+      <span class="hl hl-green">x (3×1)</span> &nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="blue-text">W₁·x + b₁</span>&nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="hl hl-blue">z₁ (4×1)</span> &nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="purple-text">ReLU</span>&nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="hl hl-teal">a₁ (4×1)</span>
+    </p>
+    <p style="font-family: 'Patrick Hand', cursive; font-size: 1.15rem; margin: 6px 0;">
+      <span class="hl hl-teal">a₁ (4×1)</span> &nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="blue-text">W₂·a₁ + b₂</span>&nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="hl hl-blue">z₂ (4×1)</span> &nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="purple-text">ReLU</span>&nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="hl hl-orange">a₂ (4×1)</span>
+    </p>
+    <p style="font-family: 'Patrick Hand', cursive; font-size: 1.15rem; margin: 6px 0;">
+      <span class="hl hl-orange">a₂ (4×1)</span> &nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="blue-text">W₃·a₂ + b₃</span>&nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="hl hl-blue">z₃ (1×1)</span> &nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="purple-text">σ (sigmoid)</span>&nbsp;
+      <span class="arrow">→</span> &nbsp;<span class="hl hl-pink">ŷ ≈ 0.6195</span>
+    </p>
+  </div>
+
+  <!-- KEY TAKEAWAYS -->
+  <h2>5. Why This Matters for Deep Learning</h2>
+  <div class="arch-box" style="border-color: var(--green); border-style: solid; background: rgba(198, 246, 213, 0.3);">
+    <ul>
+      <li><span class="hl hl-green">Every layer is a linear transform + nonlinear squish.</span> Without σ or ReLU, stacking layers collapses to one big linear map — no real "depth".</li>
+      <li><span class="hl hl-orange">ReLU kills neurons</span> whose pre-activation is negative (we saw H₁₂ &amp; H₂₃ die). This creates <em>sparse, efficient</em> activations.</li>
+      <li><span class="hl hl-blue">Shapes must align.</span> If <code>(4×3) · (3×1)</code> doesn't match, the whole pass breaks — always shape-check first.</li>
+      <li><span class="hl hl-pink">Sigmoid at the output</span> turns a raw number into a probability — perfect for binary classification.</li>
+      <li><span class="hl hl-purple">Forward pass = one prediction.</span> To <em>learn</em>, we compare ŷ with the true y, compute loss, and then <strong>backpropagate</strong> the error → that's the next chapter.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
