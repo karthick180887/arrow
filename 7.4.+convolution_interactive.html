@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convolution — Interactive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fefdf5;
+    --ink:#3a3a3a;
+    --blue:#3b6fb5;
+    --blue-deep:#2f5a93;
+    --purple:#6c4fd8;
+    --teal:#15808d;
+    --teal-fill:#2b95a3;
+    --red:#e8554e;
+    --green:#4a9d5b;
+    --yellow:#fce96a;
+    --grid:#cfe0ec;
+    --cell-border:#9bb4c7;
+    --paper-line:#e3ecf3;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background-color:var(--cream);
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size:28px 28px;
+    color:var(--ink);
+    font-family:'Kalam',cursive;
+    font-weight:400;
+    line-height:1.5;
+    padding:32px 20px 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+
+  /* headings */
+  .sec-head{display:flex;align-items:center;gap:14px;margin:0 0 6px}
+  .badge{
+    background:var(--teal-fill);color:#fff;font-family:'Kalam';font-weight:700;
+    width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:20px;flex:none;box-shadow:0 2px 0 rgba(0,0,0,.12);
+  }
+  h1{font-family:'Caveat';font-weight:700;color:var(--blue-deep);font-size:42px;margin:0;letter-spacing:.5px}
+  h2{font-family:'Caveat';font-weight:700;color:var(--purple);font-size:30px;margin:26px 0 10px}
+  .divider{border:none;border-top:2px dashed var(--grid);margin:10px 0 22px}
+  p.lead{font-size:20px;margin:6px 0 18px}
+  .hl{background:linear-gradient(transparent 55%, var(--yellow) 55%);padding:0 2px;font-weight:700}
+
+  /* layout */
+  .stage{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:26px;
+    margin:18px 0 8px;
+  }
+  .col{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .caption{font-size:15px;color:#6b7a86}
+  .cap-blue{color:var(--blue)}
+  .cap-purple{color:var(--purple)}
+  .cap-teal{color:var(--teal)}
+  .op{font-family:'Caveat';font-size:40px;color:var(--purple)}
+  .op-teal{color:var(--teal)}
+
+  /* grids */
+  .grid-rel{position:relative}
+  .grid{display:grid;gap:0;border:2px solid var(--cell-border);background:#fff}
+  .cell{
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--cell-border);font-family:'Kalam';font-weight:700;
+    user-select:none;
+  }
+  .input-grid .cell{width:46px;height:46px;font-size:18px;cursor:pointer}
+  .kernel-grid .cell{width:50px;height:50px;font-size:17px}
+  .fmap-grid .cell{width:50px;height:50px;font-size:17px;background:#f5f7f9}
+  .win{
+    position:absolute;border:3px solid var(--red);border-radius:3px;
+    pointer-events:none;transition:all .35s cubic-bezier(.4,0,.2,1);
+    box-shadow:0 0 0 2px rgba(232,85,78,.18);
+  }
+  .lit{background:var(--yellow)!important}
+  .k-pos{background:#eaf6ec}
+  .k-zero{background:#f4f4f4}
+  .k-neg{background:#fdeceb}
+  .fmap-cur{outline:3px solid var(--teal-fill);outline-offset:-3px;background:#d7eef1!important;color:var(--teal-fill)!important}
+  .fmap-done{background:#eaf6f8!important;color:var(--teal-fill)}
+
+  /* controls */
+  .controls{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;margin:14px 0}
+  button{
+    font-family:'Kalam';font-weight:700;font-size:16px;cursor:pointer;
+    border:2px solid var(--blue);background:#fff;color:var(--blue-deep);
+    padding:7px 16px;border-radius:10px;transition:.15s;
+  }
+  button:hover{background:var(--blue);color:#fff}
+  button:disabled{opacity:.4;cursor:not-allowed}
+  button.primary{background:var(--teal-fill);border-color:var(--teal-fill);color:#fff}
+  button.primary:hover{background:var(--teal)}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0 4px}
+  .chip{
+    font-family:'Kalam';font-weight:700;font-size:15px;cursor:pointer;
+    border:2px solid var(--cell-border);background:#fff;color:var(--ink);
+    padding:6px 14px;border-radius:20px;transition:.15s;
+  }
+  .chip:hover{border-color:var(--purple)}
+  .chip.active{background:var(--purple);border-color:var(--purple);color:#fff}
+
+  /* math panel */
+  .panel{
+    background:#fff;border:2px solid var(--grid);border-radius:12px;
+    padding:14px 18px;margin:14px auto;max-width:760px;font-size:18px;text-align:center;
+  }
+  .math{font-family:'Kalam';font-weight:400;font-size:18px;line-height:1.7}
+  .math .gp{white-space:nowrap}
+  .math .pl{margin:0 7px;font-weight:700}
+  .term-pos{color:var(--green);font-weight:700}
+  .term-neg{color:var(--red);font-weight:700}
+  .sum-out{font-family:'Caveat';font-size:30px;font-weight:700;color:var(--teal)}
+
+  /* callout boxes */
+  .callout{border-radius:10px;padding:14px 18px;margin:18px 0;font-size:18px}
+  .callout-y{background:#fffdf0;border-left:6px solid #e6b422}
+  .callout-g{background:#eef9f0;border-left:6px solid var(--green)}
+  .callout-b{background:#eef4fb;border-left:6px solid var(--blue)}
+  .callout b{font-weight:700}
+
+  /* detect badge */
+  .verdict{
+    display:inline-block;font-family:'Kalam';font-weight:700;font-size:17px;
+    padding:5px 16px;border-radius:20px;margin-top:8px;
+  }
+  .v-flat{background:#eef0f2;color:#6b7a86}
+  .v-edge{background:#fde7e6;color:var(--red)}
+  .v-mid{background:#fff6e0;color:#b8860b}
+  .v-info{background:#e4f3f6;color:var(--teal)}
+
+  .detect-line{font-family:'Caveat';font-size:26px;color:var(--purple);text-align:center;margin:4px 0}
+  .detect-line b{color:var(--teal)}
+
+  .img-grid .cell{cursor:pointer;border-color:#d9d9d9}
+  .out-grid .cell{border-color:#d9d9d9}
+  .footnote{font-size:15px;color:#6b7a86;text-align:center;margin-top:6px}
+  @media (max-width:560px){
+    h1{font-size:32px}.op{font-size:30px}
+    .input-grid .cell{width:38px;height:38px;font-size:15px}
+    .kernel-grid .cell,.fmap-grid .cell{width:42px;height:42px;font-size:15px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ PART 1: MECHANICS ============ -->
+  <div class="sec-head"><span class="badge">1</span><h1>The Convolution — watch it slide</h1></div>
+  <hr class="divider">
+
+  <div class="chip-row" id="kernelChips"></div>
+
+  <div class="stage">
+    <div class="col">
+      <span class="caption cap-blue">input 5×5</span>
+      <div class="grid-rel">
+        <div class="grid input-grid" id="inputGrid"></div>
+        <div class="win" id="win"></div>
+      </div>
+    </div>
+
+    <span class="op">⊙</span>
+
+    <div class="col">
+      <span class="caption cap-purple">kernel 3×3</span>
+      <div class="grid kernel-grid" id="kernelGrid"></div>
+      <span class="caption" id="kernelName">vertical-edge</span>
+    </div>
+
+    <span class="op op-teal">→ Σ →</span>
+
+    <div class="col">
+      <span class="caption cap-teal">feature map</span>
+      <div class="grid fmap-grid" id="fmapGrid"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="math" id="mathPanel"></div>
+  </div>
+
+  <div class="controls">
+    <button id="prevBtn">◀ Prev</button>
+    <button id="playBtn" class="primary">▶ Play</button>
+    <button id="nextBtn">Next ▶</button>
+    <button id="resetBtn">↺ Reset</button>
+  </div>
+
+  <div class="callout callout-b">
+    <b>kernel weight × pixel under it</b>, sum all 9 → that number fills the highlighted cell. Step → repeat.
+  </div>
+
+  <!-- ============ PART 2: MEANING ============ -->
+  <div class="sec-head" style="margin-top:48px"><span class="badge">2</span><h1>What the kernel "means"</h1></div>
+  <hr class="divider">
+
+  <div class="chip-row" id="presetChips"></div>
+  <div class="detect-line" id="detectLine"></div>
+
+  <div class="stage">
+    <div class="col">
+      <span class="caption cap-blue">image</span>
+      <div class="grid-rel">
+        <div class="grid img-grid" id="imgGrid"></div>
+        <div class="win" id="win2"></div>
+      </div>
+      <span class="caption">click any spot, or Sweep</span>
+    </div>
+
+    <div class="col">
+      <span class="caption cap-purple">kernel</span>
+      <div class="grid kernel-grid" id="kernelGrid2"></div>
+      <span class="caption" id="kernelName2"></span>
+    </div>
+
+    <span class="op op-teal">→</span>
+
+    <div class="col">
+      <span class="caption cap-teal">feature map</span>
+      <div class="grid out-grid" id="outGrid"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="math" id="mathPanel2"></div>
+    <div id="verdictWrap"></div>
+  </div>
+
+  <div class="controls">
+    <button id="play2Btn" class="primary">▶ Sweep the image</button>
+    <button id="reset2Btn">↺ Reset position</button>
+  </div>
+
+</div>
+
+<script>
+/* ============================================================
+   PART 1 — convolution mechanics
+   ============================================================ */
+const INPUT = [
+  [1,2,3,0,1],
+  [0,1,2,1,0],
+  [3,1,0,2,1],
+  [2,0,1,3,2],
+  [1,2,0,1,0]
+];
+
+const KERNELS = {
+  'vertical-edge'  : [[1,0,-1],[1,0,-1],[1,0,-1]],
+  'horizontal-edge': [[1,1,1],[0,0,0],[-1,-1,-1]],
+  'blur (1/9)'     : [[1,1,1],[1,1,1],[1,1,1]],   // shown as 1/9 in label
+  'sharpen'        : [[0,-1,0],[-1,5,-1],[0,-1,0]]
+};
+const BLUR_DIV = 9;
+
+let curKernelKey = 'vertical-edge';
+let pos = 0;                 // 0..8 over the 3x3 output
+const OUT_N = 3;            // 5-3+1
+let computed = Array(OUT_N*OUT_N).fill(null);
+let playing = false, timer = null;
+
+const inputGrid = document.getElementById('inputGrid');
+const kernelGrid = document.getElementById('kernelGrid');
+const fmapGrid = document.getElementById('fmapGrid');
+const win = document.getElementById('win');
+const mathPanel = document.getElementById('mathPanel');
+const kernelName = document.getElementById('kernelName');
+const CELL1 = 46; // px, must match CSS .input-grid .cell
+
+function k() { return KERNELS[curKernelKey]; }
+function isBlur(){ return curKernelKey.startsWith('blur'); }
+function wTxt(v){ return isBlur() ? '1/9' : (v>0?('+'+v):''+v); }
+
+function buildInput(){
+  inputGrid.style.gridTemplateColumns = `repeat(5,${CELL1}px)`;
+  inputGrid.innerHTML='';
+  for(let r=0;r<5;r++)for(let c=0;c<5;c++){
+    const d=document.createElement('div');
+    d.className='cell'; d.textContent=INPUT[r][c];
+    d.dataset.r=r; d.dataset.c=c;
+    inputGrid.appendChild(d);
+  }
+}
+function buildKernel(){
+  kernelGrid.style.gridTemplateColumns='repeat(3,50px)';
+  kernelGrid.innerHTML='';
+  const K=k();
+  for(let r=0;r<3;r++)for(let c=0;c<3;c++){
+    const v=K[r][c];
+    const d=document.createElement('div');
+    d.className='cell '+(isBlur()? 'k-pos' : v>0?'k-pos':v<0?'k-neg':'k-zero');
+    d.textContent=wTxt(v);
+    kernelGrid.appendChild(d);
+  }
+  kernelName.textContent=curKernelKey;
+}
+function buildFmap(){
+  fmapGrid.style.gridTemplateColumns='repeat(3,50px)';
+  fmapGrid.innerHTML='';
+  for(let i=0;i<OUT_N*OUT_N;i++){
+    const d=document.createElement('div'); d.className='cell'; d.dataset.i=i;
+    fmapGrid.appendChild(d);
+  }
+}
+
+function computeAt(or,oc){
+  const K=k(); let sum=0; const terms=[];
+  for(let r=0;r<3;r++)for(let c=0;c<3;c++){
+    const px=INPUT[or+r][oc+c]; const w=K[r][c];
+    sum+=px*w; terms.push({px,w});
+  }
+  if(isBlur()) sum=sum/BLUR_DIV;
+  return {sum,terms};
+}
+
+function render(){
+  const or=Math.floor(pos/OUT_N), oc=pos%OUT_N;
+  // window overlay
+  win.style.left=(oc*CELL1)+'px';
+  win.style.top =(or*CELL1)+'px';
+  win.style.width =(3*CELL1)+'px';
+  win.style.height=(3*CELL1)+'px';
+  // lit input cells
+  inputGrid.querySelectorAll('.cell').forEach(d=>{
+    const r=+d.dataset.r, c=+d.dataset.c;
+    d.classList.toggle('lit', r>=or&&r<or+3&&c>=oc&&c<oc+3);
+  });
+  // compute current + store
+  const {sum,terms}=computeAt(or,oc);
+  computed[pos]=sum;
+  // fmap cells
+  fmapGrid.querySelectorAll('.cell').forEach(d=>{
+    const i=+d.dataset.i;
+    d.classList.remove('fmap-cur','fmap-done');
+    if(computed[i]!==null){ d.textContent=fmt(computed[i]); d.classList.add('fmap-done'); }
+    else d.textContent='';
+    if(i===pos){ d.classList.add('fmap-cur'); }
+  });
+  // math panel
+  const parts=terms.map(t=>{
+    const prod=t.px*t.w;
+    const cls=prod>0?'term-pos':prod<0?'term-neg':'';
+    const wShow=isBlur()?'⅑':(t.w>=0?('+'+t.w):''+t.w);
+    return `<span class="${cls}">(${t.px}·${wShow})</span>`;
+  });
+  const eq = [parts.slice(0,3), parts.slice(3,6), parts.slice(6,9)]
+    .map(row=>`<span class="gp">${row.join(' + ')}</span>`)
+    .join('<span class="pl">+</span>');
+  mathPanel.innerHTML = `${eq} = <span class="sum-out">${fmt(sum)}</span>`;
+}
+function fmt(x){
+  if(Number.isInteger(x)) return ''+x;
+  return (Math.round(x*100)/100).toString();
+}
+
+function step(d){
+  pos=(pos+d+OUT_N*OUT_N)%(OUT_N*OUT_N);
+  // when wrapping back to 0, clear future cells fresh
+  render();
+}
+function resetAll(){
+  stopPlay(); pos=0; computed=Array(OUT_N*OUT_N).fill(null); render();
+}
+function playStep(){
+  if(pos===OUT_N*OUT_N-1){ // finished
+    stopPlay(); return;
+  }
+  step(1);
+}
+function startPlay(){
+  if(pos===OUT_N*OUT_N-1){ pos=0; computed=Array(OUT_N*OUT_N).fill(null); render(); }
+  playing=true; document.getElementById('playBtn').textContent='⏸ Pause';
+  timer=setInterval(()=>{ if(pos===OUT_N*OUT_N-1){stopPlay();} else step(1); },950);
+}
+function stopPlay(){
+  playing=false; clearInterval(timer); document.getElementById('playBtn').textContent='▶ Play';
+}
+
+// kernel chips
+const kernelChips=document.getElementById('kernelChips');
+Object.keys(KERNELS).forEach(key=>{
+  const b=document.createElement('button');
+  b.className='chip'+(key===curKernelKey?' active':'');
+  b.textContent=key; b.onclick=()=>{
+    curKernelKey=key;
+    [...kernelChips.children].forEach(c=>c.classList.remove('active'));
+    b.classList.add('active');
+    buildKernel(); resetAll();
+  };
+  kernelChips.appendChild(b);
+});
+
+document.getElementById('prevBtn').onclick=()=>{stopPlay();step(-1);};
+document.getElementById('nextBtn').onclick=()=>{stopPlay();step(1);};
+document.getElementById('resetBtn').onclick=resetAll;
+document.getElementById('playBtn').onclick=()=>{ playing?stopPlay():startPlay(); };
+inputGrid.addEventListener('click',e=>{
+  const c=e.target.closest('.cell'); if(!c)return;
+  // jump window so clicked cell is top-left (clamped)
+  let r=Math.min(+c.dataset.r,2), cc=Math.min(+c.dataset.c,2);
+  stopPlay(); pos=r*OUT_N+cc; render();
+});
+
+buildInput(); buildKernel(); buildFmap(); render();
+
+
+/* ============================================================
+   PART 2 — what the kernel detects
+   ============================================================ */
+const N=10, CELL2=30, OUTN=N-2;  // 8x8 output
+// bright square (value 1) on dark (0)
+const IMG=[];
+for(let r=0;r<N;r++){ IMG.push([]); for(let c=0;c<N;c++){
+  IMG[r][c]=(r>=2&&r<=7&&c>=2&&c<=7)?1:0;
+}}
+
+const PRESETS={
+  'vertical edge'  :{k:[[1,0,-1],[1,0,-1],[1,0,-1]], div:1, detects:'vertical edges', type:'edge'},
+  'horizontal edge':{k:[[1,1,1],[0,0,0],[-1,-1,-1]], div:1, detects:'horizontal edges', type:'edge'},
+  'blur'           :{k:[[1,1,1],[1,1,1],[1,1,1]], div:9, detects:'blur / smooth', type:'blur'},
+  'sharpen'        :{k:[[0,-1,0],[-1,5,-1],[0,-1,0]], div:1, detects:'sharpen', type:'sharp'}
+};
+let curPreset='vertical edge';
+let pos2={r:1,c:1};   // center of window (1..8)
+let out=[], maxAbs=1;
+let playing2=false, timer2=null;
+
+const imgGrid=document.getElementById('imgGrid');
+const outGrid=document.getElementById('outGrid');
+const kernelGrid2=document.getElementById('kernelGrid2');
+const win2=document.getElementById('win2');
+const mathPanel2=document.getElementById('mathPanel2');
+const verdictWrap=document.getElementById('verdictWrap');
+const kernelName2=document.getElementById('kernelName2');
+const detectLine=document.getElementById('detectLine');
+
+function gray(v){ const g=Math.round(v*255); return `rgb(${g},${g},${g})`; }
+function fmtCell(x){ const r=Math.round(x*10)/10; return (Object.is(r,-0)?0:r).toString(); }
+
+function buildImg(){
+  imgGrid.style.gridTemplateColumns=`repeat(${N},${CELL2}px)`;
+  imgGrid.innerHTML='';
+  for(let r=0;r<N;r++)for(let c=0;c<N;c++){
+    const d=document.createElement('div');
+    d.className='cell'; d.style.width=CELL2+'px'; d.style.height=CELL2+'px';
+    d.style.background=gray(IMG[r][c]); d.style.color=IMG[r][c]>0.5?'#222':'#cfcfcf';
+    d.style.fontSize='12px'; d.textContent=IMG[r][c];
+    d.dataset.r=r; d.dataset.c=c;
+    imgGrid.appendChild(d);
+  }
+}
+function buildKernel2(){
+  const P=PRESETS[curPreset], K=P.k;
+  kernelGrid2.style.gridTemplateColumns='repeat(3,50px)';
+  kernelGrid2.innerHTML='';
+  for(let r=0;r<3;r++)for(let c=0;c<3;c++){
+    const v=K[r][c];
+    const d=document.createElement('div');
+    const cls=P.type==='blur'?'k-pos':v>0?'k-pos':v<0?'k-neg':'k-zero';
+    d.className='cell '+cls;
+    d.textContent=P.type==='blur'?'1/9':(v>0?('+'+v):''+v);
+    kernelGrid2.appendChild(d);
+  }
+  kernelName2.textContent=curPreset;
+  detectLine.innerHTML=`this pattern detects → <b>${P.detects}</b>`;
+}
+function computeOut(){
+  const P=PRESETS[curPreset], K=P.k;
+  out=[]; maxAbs=0;
+  for(let or=0;or<OUTN;or++){ out.push([]); for(let oc=0;oc<OUTN;oc++){
+    let s=0;
+    for(let r=0;r<3;r++)for(let c=0;c<3;c++) s+=IMG[or+r][oc+c]*K[r][c];
+    s/=P.div;
+    out[or].push(s);
+    maxAbs=Math.max(maxAbs,Math.abs(s));
+  }}
+  if(maxAbs===0)maxAbs=1;
+}
+function buildOut(){
+  outGrid.style.gridTemplateColumns=`repeat(${OUTN},${CELL2}px)`;
+  outGrid.innerHTML='';
+  // normalize signed -> [0,1]; for blur it's already 0..1
+  let lo=Infinity,hi=-Infinity;
+  for(let r=0;r<OUTN;r++)for(let c=0;c<OUTN;c++){lo=Math.min(lo,out[r][c]);hi=Math.max(hi,out[r][c]);}
+  const span=(hi-lo)||1;
+  for(let r=0;r<OUTN;r++)for(let c=0;c<OUTN;c++){
+    const d=document.createElement('div');
+    d.className='cell'; d.style.width=CELL2+'px'; d.style.height=CELL2+'px';
+    const norm=(out[r][c]-lo)/span;
+    d.style.background=gray(norm);
+    d.style.color=norm<0.5?'#e8e8e8':'#222';
+    d.style.fontSize='11px';
+    d.textContent=fmtCell(out[r][c]);
+    d.dataset.r=r; d.dataset.c=c;
+    outGrid.appendChild(d);
+  }
+}
+function render2(){
+  const cr=pos2.r, cc=pos2.c;          // window center
+  const or=cr-1, oc=cc-1;              // top-left of 3x3 + output index
+  win2.style.left=(oc*CELL2)+'px';
+  win2.style.top =(or*CELL2)+'px';
+  win2.style.width=(3*CELL2)+'px';
+  win2.style.height=(3*CELL2)+'px';
+  // highlight output cell
+  outGrid.querySelectorAll('.cell').forEach(d=>{
+    d.classList.toggle('fmap-cur', +d.dataset.r===or && +d.dataset.c===oc);
+  });
+  // math
+  const P=PRESETS[curPreset], K=P.k; let s=0; const terms=[];
+  for(let r=0;r<3;r++)for(let c=0;c<3;c++){
+    const px=IMG[or+r][oc+c], w=K[r][c]; s+=px*w; terms.push({px,w});
+  }
+  const raw=s; s/=P.div;
+  const parts=terms.map(t=>{
+    const prod=t.px*t.w; const cls=prod>0?'term-pos':prod<0?'term-neg':'';
+    const wShow=P.type==='blur'?'⅑':(t.w>=0?('+'+t.w):''+t.w);
+    return `<span class="${cls}">(${t.px}·${wShow})</span>`;
+  });
+  const eq=[parts.slice(0,3), parts.slice(3,6), parts.slice(6,9)]
+    .map(row=>`<span class="gp">${row.join(' + ')}</span>`)
+    .join('<span class="pl">+</span>');
+  mathPanel2.innerHTML=`${eq} = <span class="sum-out">${fmt(s)}</span>`;
+  // verdict
+  verdictWrap.innerHTML=verdict(s,P.type);
+}
+function verdict(val,type){
+  const a=Math.abs(val);
+  if(type==='blur'){
+    return `<span class="verdict v-info">averaged value of the 9 pixels = ${fmt(val)}</span>`;
+  }
+  if(type==='sharp'){
+    return `<span class="verdict v-info">center boosted vs its neighbours → detail enhanced</span>`;
+  }
+  // edge
+  if(a < 0.001) return `<span class="verdict v-flat">≈ 0 → flat patch, the +/− cancel out</span>`;
+  if(a >= 0.6*maxAbs) return `<span class="verdict v-edge">strong response → sitting on an edge!</span>`;
+  return `<span class="verdict v-mid">partial → near an edge</span>`;
+}
+
+function switchPreset(name){
+  curPreset=name;
+  buildKernel2(); computeOut(); buildOut(); render2();
+}
+
+// preset chips
+const presetChips=document.getElementById('presetChips');
+Object.keys(PRESETS).forEach(name=>{
+  const b=document.createElement('button');
+  b.className='chip'+(name===curPreset?' active':'');
+  b.textContent=name; b.onclick=()=>{
+    [...presetChips.children].forEach(c=>c.classList.remove('active'));
+    b.classList.add('active'); stopPlay2(); switchPreset(name);
+  };
+  presetChips.appendChild(b);
+});
+
+imgGrid.addEventListener('click',e=>{
+  const c=e.target.closest('.cell'); if(!c)return;
+  let r=+c.dataset.r, cc=+c.dataset.c;
+  r=Math.max(1,Math.min(8,r)); cc=Math.max(1,Math.min(8,cc));
+  stopPlay2(); pos2={r,c:cc}; render2();
+});
+
+function startPlay2(){
+  playing2=true; document.getElementById('play2Btn').textContent='⏸ Pause';
+  timer2=setInterval(()=>{
+    let i=(pos2.r-1)*OUTN+(pos2.c-1);
+    i=(i+1)%(OUTN*OUTN);
+    pos2={r:Math.floor(i/OUTN)+1, c:i%OUTN+1};
+    render2();
+  },180);
+}
+function stopPlay2(){
+  playing2=false; clearInterval(timer2); document.getElementById('play2Btn').textContent='▶ Sweep the image';
+}
+document.getElementById('play2Btn').onclick=()=>{ playing2?stopPlay2():startPlay2(); };
+document.getElementById('reset2Btn').onclick=()=>{ stopPlay2(); pos2={r:1,c:1}; render2(); };
+
+buildImg(); buildKernel2(); computeOut(); buildOut(); render2();
+</script>
+</body>
+</html>
